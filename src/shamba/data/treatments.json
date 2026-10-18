@@ -1,0 +1,718 @@
+{
+  "defaults": {
+    "fungal": {
+      "type": "fungal",
+      "summary": "A fungal leaf disease. Most fungal diseases spread faster in warm, humid, crowded canopies.",
+      "act_now": [
+        "Remove and destroy the most affected leaves away from the field.",
+        "Avoid working in the crop while leaves are wet; you spread spores.",
+        "Increase spacing or prune to improve airflow and sunlight penetration."
+      ],
+      "organic": [
+        "Spray neem extract or a copper-based product approved for this crop, following the label.",
+        "Apply compost tea or a silicon amendment only where locally recommended."
+      ],
+      "chemical": [
+        "If disease pressure is high, use a fungicide registered for this crop and disease.",
+        "Rotate active ingredients between sprays to slow resistance; never exceed label rates."
+      ],
+      "prevent": [
+        "Rotate with a non-host crop for at least one season.",
+        "Use certified, disease-free seed and resistant varieties where available.",
+        "Mulch to stop soil splash and water at the base, not overhead."
+      ],
+      "escalate": "If more than 30% of the canopy is affected, or it is spreading fast after 5-7 days, contact your local extension officer."
+    },
+    "bacterial": {
+      "type": "bacterial",
+      "summary": "A bacterial disease. It spreads through splashing water, contaminated tools, and infected seed.",
+      "act_now": [
+        "Remove infected plants or leaves and destroy them; do not compost.",
+        "Disinfect pruning tools with alcohol or bleach solution between plants.",
+        "Stop overhead irrigation and avoid moving through wet plants."
+      ],
+      "organic": [
+        "Copper-based sprays approved for the crop can slow spread; follow the label.",
+        "Improve drainage and airflow; avoid high-nitrogen fertilizer flushes."
+      ],
+      "chemical": [
+        "There is no cure once a plant is infected. Protect healthy plants with a registered copper bactericide if locally recommended.",
+        "Antibiotic sprays are restricted in many countries; check local rules first."
+      ],
+      "prevent": [
+        "Use clean, certified seed and rotate crops.",
+        "Remove crop debris after harvest and control volunteer plants.",
+        "Avoid overhead watering and keep tools clean."
+      ],
+      "escalate": "If new plants keep showing symptoms after removal, contact your extension officer to confirm the diagnosis."
+    },
+    "viral": {
+      "type": "viral",
+      "summary": "A viral disease. There is no chemical cure; management focuses on the vector and on stopping spread.",
+      "act_now": [
+        "Remove and destroy infected plants immediately, including roots.",
+        "Control the insect vector (whitefly, aphid, thrips) with traps and approved products.",
+        "Wash hands and tools after handling infected plants."
+      ],
+      "organic": [
+        "Use yellow sticky traps and row covers where practical.",
+        "Spray neem or insecticidal soap for vector control, following the label."
+      ],
+      "chemical": [
+        "Use a registered insecticide for the vector, not the virus; rotate modes of action.",
+        "Do not expect a spray to cure plants that are already infected."
+      ],
+      "prevent": [
+        "Plant resistant or tolerant varieties where available.",
+        "Use clean seed and transplants; isolate new seedlings.",
+        "Control weeds that host the vector around the field."
+      ],
+      "escalate": "If more than 10% of plants are infected, or the vector population is high, contact your extension officer before replanting."
+    },
+    "pest": {
+      "type": "pest",
+      "summary": "A pest infestation. Check the underside of leaves and look for webbing, stippling, or insects.",
+      "act_now": [
+        "Inspect several plants across the field to estimate the infestation level.",
+        "Remove heavily infested leaves and destroy them.",
+        "Reduce water stress; stressed plants suffer more damage."
+      ],
+      "organic": [
+        "Spray water or insecticidal soap on the undersides of leaves.",
+        "Encourage predators such as ladybirds and predatory mites; avoid broad-spectrum sprays."
+      ],
+      "chemical": [
+        "Use a miticide or insecticide registered for this pest and crop only if thresholds are exceeded.",
+        "Rotate active ingredients; spider mites develop resistance quickly."
+      ],
+      "prevent": [
+        "Rotate crops and remove crop residues.",
+        "Keep field edges weed-free; monitor weekly with sticky traps.",
+        "Avoid dusty conditions and over-fertilizing with nitrogen."
+      ],
+      "escalate": "If webbing covers growing tips or plants are defoliating, contact your extension officer."
+    },
+    "healthy": {
+      "type": "healthy",
+      "summary": "The leaf looks healthy. Keep scouting so problems are caught early.",
+      "act_now": [
+        "Check the underside of leaves and new growth weekly.",
+        "Take photos of any new spots and compare them over time."
+      ],
+      "organic": [
+        "Maintain compost and mulch to build soil health.",
+        "Keep beneficial insect habitat around the field."
+      ],
+      "chemical": [
+        "No spray is needed for a healthy leaf.",
+        "Avoid preventive spraying; it wastes money and can cause resistance."
+      ],
+      "prevent": [
+        "Rotate crops and use resistant varieties.",
+        "Water at the base in the morning so leaves dry before night.",
+        "Space plants for airflow and remove crop debris after harvest."
+      ],
+      "escalate": "If symptoms appear later, take a clear photo and ask again."
+    }
+  },
+  "diseases": {
+    "maize_common_rust": {
+      "type": "fungal",
+      "summary": "Common rust shows orange-brown pustules on both leaf surfaces. It is favoured by cool, humid nights and usually causes limited loss unless it appears early and spreads fast.",
+      "act_now": [
+        "Check the upper leaves of 10 plants across the field.",
+        "Record how many plants show pustules; rust usually does not need spraying.",
+        "Keep the crop healthy; drought stress makes rust worse."
+      ],
+      "organic": [
+        "Sulphur or neem products can slow rust if applied early, following the label.",
+        "Plant resistant hybrids next season."
+      ],
+      "chemical": [
+        "Spray a registered triazole or strobilurin fungicide only if rust appears before tasselling and is spreading.",
+        "One well-timed spray is usually better than repeated spraying."
+      ],
+      "prevent": [
+        "Use rust-resistant maize hybrids.",
+        "Avoid late planting and excessive nitrogen.",
+        "Remove volunteer maize that carries the fungus between seasons."
+      ],
+      "escalate": "If rust appears before tasselling and more than 20% of leaf area is affected, consult an extension officer about a fungicide."
+    },
+    "maize_northern_leaf_blight": {
+      "type": "fungal",
+      "summary": "Northern leaf blight causes long, cigar-shaped grey-green lesions. It survives on crop residue and spreads in humid weather.",
+      "act_now": [
+        "Remove or bury crop residue after harvest.",
+        "Avoid overhead irrigation and improve airflow.",
+        "Check lower leaves first; the disease moves upward."
+      ],
+      "organic": [
+        "Neem or copper sprays may slow spread; apply before lesions are widespread.",
+        "Use compost to support plant vigour."
+      ],
+      "chemical": [
+        "A registered fungicide at first lesions can protect yield in susceptible hybrids.",
+        "Do not spray after the crop has reached dough stage."
+      ],
+      "prevent": [
+        "Plant resistant hybrids and rotate with legumes.",
+        "Avoid continuous maize on the same plot.",
+        "Remove volunteer plants."
+      ],
+      "escalate": "If lesions reach the ear leaf before flowering, contact an extension officer."
+    },
+    "maize_cercospora_and_gray_leaf_spot": {
+      "type": "fungal",
+      "summary": "Gray leaf spot causes rectangular grey lesions between veins. It builds up in fields with continuous maize and surface residue.",
+      "act_now": [
+        "Improve airflow and avoid working in wet foliage.",
+        "Remove infected residue after harvest.",
+        "Check whether the variety is known to be susceptible."
+      ],
+      "organic": [
+        "Neem or copper products can slow spread early in the season.",
+        "Mulch with clean material to reduce splash."
+      ],
+      "chemical": [
+        "Use a registered fungicide if lesions reach the ear leaf and weather stays humid.",
+        "Rotate active ingredients."
+      ],
+      "prevent": [
+        "Rotate with soybean or another non-host.",
+        "Use resistant varieties and clean seed.",
+        "Bury or remove residue."
+      ],
+      "escalate": "If the ear leaf is affected before flowering, get a second opinion before spraying."
+    },
+    "tomato_late_blight": {
+      "type": "fungal",
+      "summary": "Late blight causes water-soaked lesions with white mould on the underside. It can destroy a field in days in cool, wet weather.",
+      "act_now": [
+        "Remove and destroy infected plants immediately; do not compost.",
+        "Harvest healthy fruit early if the disease is close.",
+        "Stop overhead irrigation and improve ventilation."
+      ],
+      "organic": [
+        "Copper-based sprays can protect healthy plants; apply before infection.",
+        "Remove volunteers and nightshade weeds that host the pathogen."
+      ],
+      "chemical": [
+        "Use a registered late-blight fungicide preventively when weather is cool and wet.",
+        "Alternate active ingredients to slow resistance."
+      ],
+      "prevent": [
+        "Plant certified seed and resistant varieties.",
+        "Avoid overhead watering and dense planting.",
+        "Do not store infected tubers or fruit with healthy ones."
+      ],
+      "escalate": "Act the same day: late blight spreads explosively. If you see white mould on lesions, contact an extension officer immediately."
+    },
+    "potato_late_blight": {
+      "type": "fungal",
+      "summary": "Late blight on potato causes dark water-soaked leaf lesions and white mould. It can rot tubers in storage.",
+      "act_now": [
+        "Remove and destroy infected foliage; do not compost.",
+        "Stop overhead irrigation and harvest tubers only after foliage dies down.",
+        "Check stored tubers for rot."
+      ],
+      "organic": [
+        "Copper protectant sprays before infection.",
+        "Remove volunteer potatoes and infected debris."
+      ],
+      "chemical": [
+        "Preventive registered fungicides are far more effective than curative sprays.",
+        "Follow local late-blight forecasting alerts."
+      ],
+      "prevent": [
+        "Use certified seed potatoes and resistant varieties.",
+        "Rotate away from potatoes and tomatoes for 2-3 seasons.",
+        "Earth up tubers well to reduce spore wash into soil."
+      ],
+      "escalate": "If lesions appear and weather is cool and wet, treat within 24 hours and alert neighbouring farmers."
+    },
+    "potato_early_blight": {
+      "type": "fungal",
+      "summary": "Early blight causes brown concentric rings on older leaves. It usually starts on lower leaves and moves upward.",
+      "act_now": [
+        "Remove affected lower leaves and improve airflow.",
+        "Keep plants well fed and watered; stressed plants get hit harder.",
+        "Mulch to prevent soil splash."
+      ],
+      "organic": [
+        "Neem or copper sprays can slow progress.",
+        "Compost tea may support plant health but is not a cure."
+      ],
+      "chemical": [
+        "Use a registered fungicide if lesions are moving up the canopy.",
+        "Rotate with a different mode of action next spray."
+      ],
+      "prevent": [
+        "Rotate crops and remove residue.",
+        "Use certified seed and resistant varieties.",
+        "Avoid overhead irrigation."
+      ],
+      "escalate": "If more than 30% of leaves are affected, consult an extension officer."
+    },
+    "tomato_bacterial_spot": {
+      "type": "bacterial",
+      "summary": "Bacterial spot causes small dark greasy spots on leaves and fruit. It spreads in rain splash and on contaminated seed.",
+      "act_now": [
+        "Remove infected leaves and fruit; disinfect tools between plants.",
+        "Avoid overhead watering and working in wet plants.",
+        "Do not save seed from infected fruit."
+      ],
+      "organic": [
+        "Copper sprays can reduce spread when applied early.",
+        "Improve airflow and keep foliage dry."
+      ],
+      "chemical": [
+        "Copper-based bactericides are the main option; follow the label.",
+        "Antibiotics are restricted in many countries; check local rules."
+      ],
+      "prevent": [
+        "Use certified disease-free seed and transplants.",
+        "Rotate with non-solanaceous crops.",
+        "Mulch and stake plants to reduce splash."
+      ],
+      "escalate": "If spots appear on fruit, contact an extension officer; marketability drops quickly."
+    },
+    "tomato_yellow_leaf_curl_virus": {
+      "type": "viral",
+      "summary": "Yellow leaf curl causes upward-curling, yellow-edged leaves and stunted plants. It is spread by whiteflies and has no cure.",
+      "act_now": [
+        "Remove and destroy infected plants immediately.",
+        "Control whiteflies with sticky traps and approved products.",
+        "Do not take cuttings from infected plants."
+      ],
+      "organic": [
+        "Yellow sticky traps and neem sprays for whitefly.",
+        "Use reflective mulch where available."
+      ],
+      "chemical": [
+        "Use a registered insecticide for whitefly; rotate modes of action.",
+        "Spraying cannot cure infected plants."
+      ],
+      "prevent": [
+        "Plant resistant varieties and use clean transplants.",
+        "Use insect-proof nets in nurseries.",
+        "Remove weeds that host whitefly."
+      ],
+      "escalate": "If more than 10% of plants are curling, remove them and alert your extension officer."
+    },
+    "tomato_mosaic_virus": {
+      "type": "viral",
+      "summary": "Mosaic virus causes mottled light and dark green leaves, distortion, and stunting. It spreads by contact and contaminated seed.",
+      "act_now": [
+        "Remove infected plants; do not compost.",
+        "Wash hands and disinfect tools after handling plants.",
+        "Avoid smoking near the crop; tobacco can carry the virus."
+      ],
+      "organic": [
+        "No spray cures a virus; focus on hygiene and vector control.",
+        "Remove weeds and volunteer plants."
+      ],
+      "chemical": [
+        "Insecticides may reduce aphid vectors but will not cure infected plants.",
+        "Do not save seed from infected plants."
+      ],
+      "prevent": [
+        "Use certified virus-free seed.",
+        "Rotate crops and control weeds.",
+        "Disinfect tools and hands frequently."
+      ],
+      "escalate": "If symptoms are widespread, contact an extension officer before replanting."
+    },
+    "tomato_leaf_mold": {
+      "type": "fungal",
+      "summary": "Leaf mould causes pale yellow patches on the upper leaf and olive-green mould underneath, usually in humid greenhouses.",
+      "act_now": [
+        "Increase ventilation and reduce humidity.",
+        "Remove affected leaves and avoid overhead watering.",
+        "Space plants to dry faster."
+      ],
+      "organic": [
+        "Copper or neem sprays can slow spread.",
+        "Keep foliage dry; water at the base in the morning."
+      ],
+      "chemical": [
+        "Use a registered fungicide if humidity stays high and symptoms spread.",
+        "Rotate active ingredients."
+      ],
+      "prevent": [
+        "Grow resistant varieties where available.",
+        "Prune lower leaves and keep the canopy open.",
+        "Avoid evening watering."
+      ],
+      "escalate": "If mould covers most lower leaves, consult an extension officer."
+    },
+    "tomato_septoria_leaf_spot": {
+      "type": "fungal",
+      "summary": "Septoria causes small circular spots with grey centres and dark edges, starting on lower leaves.",
+      "act_now": [
+        "Remove affected lower leaves and destroy them.",
+        "Mulch to stop soil splash.",
+        "Improve airflow by staking and pruning."
+      ],
+      "organic": [
+        "Copper sprays can protect new growth.",
+        "Remove crop residue after harvest."
+      ],
+      "chemical": [
+        "Use a registered fungicide if spots are moving up the canopy.",
+        "Rotate modes of action."
+      ],
+      "prevent": [
+        "Rotate with non-solanaceous crops.",
+        "Use clean seed and transplants.",
+        "Avoid overhead irrigation."
+      ],
+      "escalate": "If the upper canopy is affected, contact an extension officer."
+    },
+    "tomato_early_blight": {
+      "type": "fungal",
+      "summary": "Early blight causes brown concentric rings on older tomato leaves, often with a yellow halo.",
+      "act_now": [
+        "Remove affected lower leaves and improve airflow.",
+        "Mulch and water at the base.",
+        "Keep plants vigorous; stress worsens the disease."
+      ],
+      "organic": [
+        "Neem or copper sprays can slow progress.",
+        "Compost tea may support plant health."
+      ],
+      "chemical": [
+        "Use a registered fungicide if lesions are moving upward.",
+        "Rotate active ingredients."
+      ],
+      "prevent": [
+        "Rotate crops and remove residue.",
+        "Stake plants and avoid overhead irrigation.",
+        "Use resistant varieties where available."
+      ],
+      "escalate": "If more than 30% of leaves are affected, consult an extension officer."
+    },
+    "tomato_spider_mites_or_two_spotted_spider_mite": {
+      "type": "pest",
+      "summary": "Spider mites cause fine yellow stippling and webbing on the underside of leaves. They thrive in hot, dry, dusty conditions.",
+      "act_now": [
+        "Check the underside of leaves with a hand lens.",
+        "Spray the undersides with water to reduce dust and mites.",
+        "Remove heavily infested leaves."
+      ],
+      "organic": [
+        "Insecticidal soap or neem oil, covering leaf undersides.",
+        "Encourage predatory mites; avoid broad-spectrum insecticides."
+      ],
+      "chemical": [
+        "Use a registered acaricide only if webbing is widespread.",
+        "Rotate active ingredients; mites resist quickly."
+      ],
+      "prevent": [
+        "Keep plants well watered and reduce dust.",
+        "Monitor weekly, especially in dry spells.",
+        "Avoid excessive nitrogen."
+      ],
+      "escalate": "If webbing covers growing tips, treat immediately and consult an extension officer."
+    },
+    "tomato_target_spot": {
+      "type": "fungal",
+      "summary": "Target spot causes brown lesions with concentric rings on leaves and fruit.",
+      "act_now": [
+        "Remove affected leaves and fruit.",
+        "Improve airflow and avoid overhead watering.",
+        "Harvest fruit promptly."
+      ],
+      "organic": [
+        "Copper or neem sprays can slow spread.",
+        "Mulch to reduce splash."
+      ],
+      "chemical": [
+        "Use a registered fungicide if lesions are spreading.",
+        "Rotate modes of action."
+      ],
+      "prevent": [
+        "Rotate crops and remove residue.",
+        "Space plants for airflow.",
+        "Use clean seed."
+      ],
+      "escalate": "If fruit lesions are common, consult an extension officer."
+    },
+    "apple_scab": {
+      "type": "fungal",
+      "summary": "Apple scab causes olive-green to black velvety spots on leaves and fruit. It overwinters in fallen leaves.",
+      "act_now": [
+        "Rake and destroy fallen leaves around the tree.",
+        "Prune to open the canopy.",
+        "Remove the worst affected fruit."
+      ],
+      "organic": [
+        "Sulphur or copper sprays at bud break and early season, following the label.",
+        "Choose scab-resistant varieties for new plantings."
+      ],
+      "chemical": [
+        "Use a registered scab fungicide from bud break through early summer.",
+        "Alternate active ingredients."
+      ],
+      "prevent": [
+        "Clean up leaf litter every autumn.",
+        "Prune for airflow and sunlight.",
+        "Avoid overhead irrigation."
+      ],
+      "escalate": "If scab is severe every year, ask an extension officer about a spray schedule."
+    },
+    "apple_black_rot": {
+      "type": "fungal",
+      "summary": "Black rot causes brown rot on fruit and dark cankers on branches. It survives in dead wood and mummified fruit.",
+      "act_now": [
+        "Remove mummified fruit and dead branches.",
+        "Prune out cankers with clean tools.",
+        "Destroy fallen fruit."
+      ],
+      "organic": [
+        "Copper sprays during dormancy and early season.",
+        "Improve tree vigour and airflow."
+      ],
+      "chemical": [
+        "Use a registered fungicide from bud break.",
+        "Rotate active ingredients."
+      ],
+      "prevent": [
+        "Prune dead wood every year.",
+        "Remove fallen fruit and leaves.",
+        "Avoid tree stress."
+      ],
+      "escalate": "If cankers are spreading on main limbs, consult an extension officer."
+    },
+    "cedar_apple_rust": {
+      "type": "fungal",
+      "summary": "Cedar apple rust causes bright orange spots on apple leaves and fruit. It needs juniper/cedar as an alternate host.",
+      "act_now": [
+        "Remove galls from nearby juniper where practical.",
+        "Pick off severely affected leaves.",
+        "Improve airflow around trees."
+      ],
+      "organic": [
+        "Sulphur sprays during the spring infection window.",
+        "Plant resistant apple varieties."
+      ],
+      "chemical": [
+        "Registered fungicides from pink bud to early summer.",
+        "Follow local spray timing guidance."
+      ],
+      "prevent": [
+        "Separate apples from juniper hosts where possible.",
+        "Choose resistant varieties.",
+        "Prune for airflow."
+      ],
+      "escalate": "If fruit are heavily spotted, consult an extension officer."
+    },
+    "cherry_powdery_mildew": {
+      "type": "fungal",
+      "summary": "Powdery mildew causes white powdery patches on leaves and shoots, often in warm days and cool nights.",
+      "act_now": [
+        "Prune out affected shoots and improve airflow.",
+        "Avoid excessive nitrogen.",
+        "Remove fallen leaves."
+      ],
+      "organic": [
+        "Sulphur or potassium bicarbonate sprays, following the label.",
+        "Milk spray (1:9 with water) can reduce mild mildew."
+      ],
+      "chemical": [
+        "Use a registered powdery-mildew fungicide if it is spreading.",
+        "Rotate modes of action."
+      ],
+      "prevent": [
+        "Prune for open canopies.",
+        "Avoid high nitrogen and overcrowding.",
+        "Choose resistant varieties."
+      ],
+      "escalate": "If new shoots are covered, consult an extension officer."
+    },
+    "grape_black_rot": {
+      "type": "fungal",
+      "summary": "Grape black rot causes brown leaf spots and shrivelled black fruit. It overwinters in mummified berries.",
+      "act_now": [
+        "Remove mummified berries and infected canes.",
+        "Open the canopy for airflow.",
+        "Destroy fallen debris."
+      ],
+      "organic": [
+        "Copper or sulphur sprays from bud break, following the label.",
+        "Remove wild grapes nearby."
+      ],
+      "chemical": [
+        "Registered fungicides from early bloom through fruit set.",
+        "Rotate active ingredients."
+      ],
+      "prevent": [
+        "Prune and train vines for airflow.",
+        "Remove mummies every winter.",
+        "Avoid overhead irrigation."
+      ],
+      "escalate": "If fruit loss is heavy, consult an extension officer."
+    },
+    "grape_esca_black_measles": {
+      "type": "fungal",
+      "summary": "Esca is a chronic wood disease causing tiger-stripe leaf symptoms and sudden vine decline. There is no cure.",
+      "act_now": [
+        "Remove and destroy severely affected vines.",
+        "Prune late in dry weather and seal large cuts.",
+        "Do not propagate wood from affected vines."
+      ],
+      "organic": [
+        "No curative spray exists; focus on vine hygiene.",
+        "Improve soil health and avoid drought stress."
+      ],
+      "chemical": [
+        "Fungicides do not cure Esca; trunk-injection products are experimental and locally regulated.",
+        "Do not rely on sprays for control."
+      ],
+      "prevent": [
+        "Use clean planting material.",
+        "Avoid large pruning wounds in wet weather.",
+        "Remove infected vines early."
+      ],
+      "escalate": "If vines are dying suddenly, contact a viticulture extension officer."
+    },
+    "grape_isariopsis_leaf_spot": {
+      "type": "fungal",
+      "summary": "Isariopsis leaf spot causes dark angular spots on grape leaves, favoured by humid weather.",
+      "act_now": [
+        "Remove affected leaves and improve airflow.",
+        "Avoid overhead irrigation.",
+        "Remove debris after harvest."
+      ],
+      "organic": [
+        "Copper sprays can protect new growth.",
+        "Open the canopy."
+      ],
+      "chemical": [
+        "Use a registered fungicide if spots are spreading.",
+        "Rotate modes of action."
+      ],
+      "prevent": [
+        "Prune for airflow.",
+        "Remove fallen leaves.",
+        "Avoid dense canopies."
+      ],
+      "escalate": "If defoliation is significant, consult an extension officer."
+    },
+    "orange_citrus_greening": {
+      "type": "bacterial",
+      "summary": "Citrus greening (HLB) causes blotchy mottled leaves, lopsided bitter fruit, and tree decline. It is spread by the Asian citrus psyllid and is incurable.",
+      "act_now": [
+        "Report suspected greening to your local agriculture office; it is a regulated disease in many countries.",
+        "Remove and destroy confirmed infected trees.",
+        "Control psyllids with approved products and monitoring."
+      ],
+      "organic": [
+        "Use yellow sticky traps to monitor psyllids.",
+        "Neem or horticultural oil can reduce psyllid pressure; it will not cure the tree."
+      ],
+      "chemical": [
+        "Use a registered psyllid insecticide as part of an area-wide programme.",
+        "Do not move infected plant material."
+      ],
+      "prevent": [
+        "Plant certified disease-free nursery trees.",
+        "Inspect new trees and control psyllids.",
+        "Report unusual mottling early."
+      ],
+      "escalate": "This is a reportable disease. Contact your national plant-protection office immediately."
+    },
+    "peach_bacterial_spot": {
+      "type": "bacterial",
+      "summary": "Bacterial spot causes small dark spots on peach leaves and fruit, leading to defoliation and blemished fruit.",
+      "act_now": [
+        "Remove infected leaves and fruit.",
+        "Avoid overhead irrigation and working in wet trees.",
+        "Disinfect tools."
+      ],
+      "organic": [
+        "Copper sprays during dormancy and early season, following the label.",
+        "Improve airflow."
+      ],
+      "chemical": [
+        "Copper is the main protectant; use label rates and avoid excessive use.",
+        "Antibiotics are restricted in many countries."
+      ],
+      "prevent": [
+        "Plant resistant varieties.",
+        "Avoid overcrowding and overhead irrigation.",
+        "Remove wild Prunus hosts nearby."
+      ],
+      "escalate": "If fruit blemishes are severe, consult an extension officer."
+    },
+    "pepper_bacterial_spot": {
+      "type": "bacterial",
+      "summary": "Bacterial spot on pepper causes small water-soaked spots that turn brown on leaves and fruit.",
+      "act_now": [
+        "Remove infected leaves and fruit.",
+        "Avoid overhead watering and handling wet plants.",
+        "Disinfect tools and hands."
+      ],
+      "organic": [
+        "Copper sprays early in the season can slow spread.",
+        "Improve airflow and keep foliage dry."
+      ],
+      "chemical": [
+        "Use a registered copper bactericide; follow the label.",
+        "Check local restrictions on antibiotic sprays."
+      ],
+      "prevent": [
+        "Use certified clean seed and transplants.",
+        "Rotate with non-solanaceous crops.",
+        "Mulch to reduce splash."
+      ],
+      "escalate": "If fruit are spotted, consult an extension officer; market value drops fast."
+    },
+    "squash_powdery_mildew": {
+      "type": "fungal",
+      "summary": "Powdery mildew coats squash leaves with white powder and reduces photosynthesis.",
+      "act_now": [
+        "Remove the worst affected leaves.",
+        "Improve airflow and avoid overhead watering.",
+        "Keep plants well watered."
+      ],
+      "organic": [
+        "Milk spray (1:9 with water) or potassium bicarbonate, following the label.",
+        "Sulphur sprays in cool weather."
+      ],
+      "chemical": [
+        "Use a registered powdery-mildew fungicide if spread is rapid.",
+        "Rotate modes of action."
+      ],
+      "prevent": [
+        "Plant resistant varieties.",
+        "Space plants for airflow.",
+        "Avoid excessive nitrogen."
+      ],
+      "escalate": "If more than half the leaf area is white, consult an extension officer."
+    },
+    "strawberry_leaf_scorch": {
+      "type": "fungal",
+      "summary": "Leaf scorch causes purple to brown spots that merge, making leaves look scorched.",
+      "act_now": [
+        "Remove affected leaves and old mulch.",
+        "Improve airflow and avoid overhead irrigation.",
+        "Renovate beds after harvest."
+      ],
+      "organic": [
+        "Copper sprays after harvest and at renewal.",
+        "Use clean transplants."
+      ],
+      "chemical": [
+        "Registered fungicides during wet periods.",
+        "Rotate active ingredients."
+      ],
+      "prevent": [
+        "Use certified plants and resistant varieties.",
+        "Avoid dense beds and overhead water.",
+        "Remove old leaves."
+      ],
+      "escalate": "If plants are weakening, consult an extension officer."
+    }
+  }
+}
