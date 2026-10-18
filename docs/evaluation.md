@@ -61,3 +61,10 @@ This is why the benchmark exists. The tests passed before the fix because they o
 ## Reproduce
 
 `docs/evaluation.json` and `docs/evaluation-mobilenet.json` contain every prediction, confidence, and the folder-to-label mapping.
+
+
+## Calibration report
+
+`shamba evaluate ./labeled-folder` measures top-1 accuracy, expected calibration error, Brier score, and per-class recall. The folder layout is one directory per class name, with images inside.
+
+The tool is shipped without a dataset. A two-image smoke test on the bundled fixtures produced 0% accuracy, which is a warning about those fixtures, not a claim about the model on a real field set. A proper field-photo evaluation remains open.

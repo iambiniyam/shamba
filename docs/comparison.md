@@ -9,6 +9,7 @@
 
 - Fully offline inference with a small ONNX model.
 - Top-three alternatives and an explicit uncertainty state, not only a top label.
+- A local calibration report with accuracy, ECE, Brier score, and per-class recall.
 - Crop-specific advice with a safety boundary and a local diagnosis history.
 - No account or upload.
 

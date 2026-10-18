@@ -9,7 +9,7 @@ Take one clear photo of a leaf. shamba returns the three most likely crop diseas
 
 ![shamba web UI](docs/demo.png)
 
-Status: v0.2.2. It works well on PlantVillage-style lab photos. Field photos are the next milestone.
+Status: v0.2.3. It works well on PlantVillage-style lab photos. Field photos are the next milestone.
 
 ## Why
 
@@ -22,6 +22,7 @@ Most crop scanners send every photo to a paid API. shamba runs a small ONNX mode
 ## What it does
 
 - Keeps a local, metadata-only history of recent diagnoses.
+- Measures top-1 accuracy, ECE, Brier score, and per-class recall on a labeled local folder.
 
 1. Diagnose: returns the top three crop and disease matches with confidence scores.
 2. Explain: describes the disease and how it spreads.
@@ -170,7 +171,7 @@ No network call is made at runtime. The model and advice ship with the repo or a
 pytest -q
 ```
 
-The suite has 24 tests covering labels, preprocessing, prediction, advice, history, and the server.
+The suite has 28 tests covering labels, preprocessing, prediction, advice, history, calibration metrics, and the server.
 
 ## Roadmap
 
@@ -179,7 +180,6 @@ The suite has 24 tests covering labels, preprocessing, prediction, advice, histo
 - multi-leaf and whole-plant photos
 - a Raspberry Pi camera build
 - Spanish, French, and Portuguese advice packs
-- a confidence calibration study
 
 ## Related tools
 

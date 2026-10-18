@@ -13,7 +13,9 @@ from rich.table import Table
 
 from . import __version__
 from .advice import get_advice
+from .calibration import evaluate_records
 from .config import Paths
+from .labels import parse_label
 from .model import ModelNotReady, PlantDiseaseModel
 
 app = typer.Typer(add_completion=False, help="Offline crop-disease diagnosis for smallholder farmers.")
@@ -91,6 +93,54 @@ def diagnose(
     if advice.get("escalate"):
         console.print(Panel(advice["escalate"], title="When to escalate", border_style="red"))
     console.print(f"\n[dim]{advice['disclaimer']}[/dim]")
+
+
+@app.command()
+def evaluate(
+    folder: Path = typer.Argument(..., exists=True, file_okay=False),
+    model_path: Path | None = typer.Option(None, help="Override the ONNX model path."),
+    as_json: bool = typer.Option(False, "--json", help="Machine-readable output."),
+) -> None:
+    """Measure accuracy and calibration on a folder named by class."""
+    model = _load_model(model_path)
+    known = {label.key: label for label in model.labels.values()}
+    files: list[tuple[Path, str]] = []
+    for class_dir in sorted(folder.iterdir()):
+        if not class_dir.is_dir():
+            continue
+        info = parse_label(class_dir.name)
+        if info.key not in known:
+            console.print(f"[yellow]skip unknown class: {class_dir.name}[/yellow]")
+            continue
+        for image in sorted(class_dir.iterdir()):
+            if image.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp", ".bmp"}:
+                files.append((image, info.raw))
+    if not files:
+        console.print("[red]no labeled images found[/red]")
+        raise typer.Exit(code=1)
+
+    records = []
+    for image, true_label in files:
+        prediction = model.predict(Image.open(image), top_k=1)[0]
+        records.append(
+            {
+                "true": true_label,
+                "predicted": prediction.info.raw,
+                "confidence": prediction.confidence,
+                "correct": prediction.info.raw == true_label,
+            }
+        )
+    result = evaluate_records(records)
+    if as_json:
+        typer.echo(json.dumps(result.as_dict(), indent=2))
+        return
+    console.print(f"{result.count} images · accuracy {result.accuracy:.1%} · ECE {result.ece:.3f} · Brier {result.brier:.3f}")
+    table = Table("Class", "Recall")
+    table.add_column("Class")
+    table.add_column("Recall", justify="right")
+    for key, value in result.per_class_recall.items():
+        table.add_row(key, f"{value:.1%}")
+    console.print(table)
 
 
 @app.command()

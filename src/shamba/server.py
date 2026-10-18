@@ -34,7 +34,7 @@ async def lifespan(_app: FastAPI):
     yield
 
 
-app = FastAPI(title="shamba", version="0.2.2", lifespan=lifespan)
+app = FastAPI(title="shamba", version="0.2.3", lifespan=lifespan)
 app.mount("/static", StaticFiles(directory=STATIC), name="static")
 
 
