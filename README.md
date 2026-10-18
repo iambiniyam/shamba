@@ -17,6 +17,8 @@ $ shamba diagnose maize_leaf.jpg
 
 > **Status:** early MVP. Strong on PlantVillage-style lab photos, not yet validated on field photos. See [Evaluation](#evaluation).
 
+![shamba web UI](docs/demo.png)
+
 ## Why
 
 - Pests and diseases destroy **30–40%** of staple crop production in sub-Saharan Africa.
