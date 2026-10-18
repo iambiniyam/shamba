@@ -171,7 +171,7 @@ No network call is made at runtime. The model and advice ship with the repo or a
 pytest -q
 ```
 
-The suite has 28 tests covering labels, preprocessing, prediction, advice, history, calibration metrics, and the server.
+The suite has 29 tests covering labels, preprocessing, prediction, advice, history, calibration metrics, and the server.
 
 ## Roadmap
 
