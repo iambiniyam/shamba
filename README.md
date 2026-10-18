@@ -1,6 +1,6 @@
 # shamba
 
-**Offline crop doctor for smallholder farmers.**
+**Plant health scanner for gardeners and farmers — offline, on any laptop or edge device.**
 
 One clear photo of a leaf → a likely diagnosis, a confidence score, and a treatment plan you can afford. Runs on a laptop, a Raspberry Pi, or a Jetson — no internet after setup.
 
@@ -21,8 +21,8 @@ $ shamba diagnose maize_leaf.jpg
 
 ## Why
 
-- Pests and diseases destroy **30–40%** of staple crop production in sub-Saharan Africa.
-- Public extension services are stretched to **one officer for thousands of farmers**.
+- Pests and diseases destroy **30–40%** of crop production worldwide, and home gardeners lose plants to the same problems.
+- Extension services are stretched thin, and a plant clinic visit costs more than most gardeners will spend.
 - Most AI crop tools assume fast internet, a modern phone, and a paid API.
 
 `shamba` runs a **38-class classifier** (DINOv2-small, 84 MB ONNX, CPU) and pairs it with an integrated pest-management knowledge base. It is small enough for cheap hardware and honest enough to say *"I'm not sure."*
@@ -99,9 +99,9 @@ This is **decision support, not a plant doctor**. It can be wrong, especially on
 
 Always confirm before spending money on pesticide, and follow the product label and national registration rules. Low-confidence predictions are explicitly flagged and should be re-photographed.
 
-## Africa-first roadmap
+## Roadmap
 
-The current label set covers maize, tomato, potato, pepper, apple, grape, cherry, peach, orange, strawberry, squash, soybean, raspberry, and blueberry. The next milestones are the crops that matter most to smallholders:
+The current label set covers maize, tomato, potato, pepper, apple, grape, cherry, peach, orange, strawberry, squash, soybean, raspberry, and blueberry. Next:
 
 - [ ] Cassava: mosaic disease, brown streak, green mite
 - [ ] Banana: Xanthomonas wilt, Panama disease
@@ -111,7 +111,7 @@ The current label set covers maize, tomato, potato, pepper, apple, grape, cherry
 - [ ] Fine-tune + INT8 quantization for a ~2 MB mobile model
 - [ ] Android app with on-device inference and offline caching
 - [ ] Jetson + camera trap for community disease surveillance
-- [ ] Local-language result cards (text, not speech)
+- [ ] More languages for result cards (text, not speech)
 
 ## Evaluation
 
