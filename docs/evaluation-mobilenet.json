@@ -1,0 +1,1532 @@
+{
+  "images": 114,
+  "classes": 38,
+  "top1": 0.9211,
+  "top3": 1.0,
+  "seconds": 1.78,
+  "ms_per_image": 15.6,
+  "mapping": {
+    "Apple___Apple_scab": "Apple Scab",
+    "Apple___Black_rot": "Apple with Black Rot",
+    "Apple___Cedar_apple_rust": "Cedar Apple Rust",
+    "Apple___healthy": "Healthy Apple",
+    "Blueberry___healthy": "Healthy Blueberry Plant",
+    "Cherry_(including_sour)___Powdery_mildew": "Cherry with Powdery Mildew",
+    "Cherry_(including_sour)___healthy": "Healthy Cherry Plant",
+    "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": "Corn (Maize) with Cercospora and Gray Leaf Spot",
+    "Corn_(maize)___Common_rust_": "Corn (Maize) with Common Rust",
+    "Corn_(maize)___Northern_Leaf_Blight": "Corn (Maize) with Northern Leaf Blight",
+    "Corn_(maize)___healthy": "Healthy Corn (Maize) Plant",
+    "Grape___Black_rot": "Grape with Black Rot",
+    "Grape___Esca_(Black_Measles)": "Grape with Esca (Black Measles)",
+    "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": "Grape with Isariopsis Leaf Spot",
+    "Grape___healthy": "Healthy Grape Plant",
+    "Orange___Haunglongbing_(Citrus_greening)": "Orange with Citrus Greening",
+    "Peach___Bacterial_spot": "Peach with Bacterial Spot",
+    "Peach___healthy": "Healthy Peach Plant",
+    "Pepper,_bell___Bacterial_spot": "Bell Pepper with Bacterial Spot",
+    "Pepper,_bell___healthy": "Healthy Bell Pepper Plant",
+    "Potato___Early_blight": "Potato with Early Blight",
+    "Potato___Late_blight": "Potato with Late Blight",
+    "Potato___healthy": "Healthy Potato Plant",
+    "Raspberry___healthy": "Healthy Raspberry Plant",
+    "Soybean___healthy": "Healthy Soybean Plant",
+    "Squash___Powdery_mildew": "Squash with Powdery Mildew",
+    "Strawberry___Leaf_scorch": "Strawberry with Leaf Scorch",
+    "Strawberry___healthy": "Healthy Strawberry Plant",
+    "Tomato___Bacterial_spot": "Tomato with Bacterial Spot",
+    "Tomato___Early_blight": "Tomato with Early Blight",
+    "Tomato___Late_blight": "Tomato with Late Blight",
+    "Tomato___Leaf_Mold": "Tomato with Leaf Mold",
+    "Tomato___Septoria_leaf_spot": "Tomato with Septoria Leaf Spot",
+    "Tomato___Spider_mites Two-spotted_spider_mite": "Tomato with Spider Mites or Two-spotted Spider Mite",
+    "Tomato___Target_Spot": "Tomato with Target Spot",
+    "Tomato___Tomato_Yellow_Leaf_Curl_Virus": "Tomato Yellow Leaf Curl Virus",
+    "Tomato___Tomato_mosaic_virus": "Tomato Mosaic Virus",
+    "Tomato___healthy": "Healthy Tomato Plant"
+  },
+  "rows": [
+    {
+      "file": "Apple___Apple_scab/fdc58f83-8a94-4f0c-aefe-c6f2b5028682___FREC_Scab_3014.JPG",
+      "expected": "Apple Scab",
+      "predicted": "Bell Pepper with Bacterial Spot",
+      "top3": [
+        "Bell Pepper with Bacterial Spot",
+        "Peach with Bacterial Spot",
+        "Apple Scab"
+      ],
+      "top1": false,
+      "top3_ok": true,
+      "confidence": 0.465
+    },
+    {
+      "file": "Apple___Apple_scab/fed05dda-1d4d-4de4-bbf2-517640b3c999___FREC_Scab_3446.JPG",
+      "expected": "Apple Scab",
+      "predicted": "Apple Scab",
+      "top3": [
+        "Apple Scab",
+        "Peach with Bacterial Spot",
+        "Healthy Apple"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 1.0
+    },
+    {
+      "file": "Apple___Apple_scab/ff99efdc-a9f8-4360-9c64-f8274f456be5___FREC_Scab_3161.JPG",
+      "expected": "Apple Scab",
+      "predicted": "Apple Scab",
+      "top3": [
+        "Apple Scab",
+        "Cedar Apple Rust",
+        "Peach with Bacterial Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 1.0
+    },
+    {
+      "file": "Apple___Black_rot/ff0f9b3a-4ef4-4c38-9a23-516beff99192___JR_FrgE.S_3048.JPG",
+      "expected": "Apple with Black Rot",
+      "predicted": "Apple with Black Rot",
+      "top3": [
+        "Apple with Black Rot",
+        "Bell Pepper with Bacterial Spot",
+        "Tomato with Target Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.998
+    },
+    {
+      "file": "Apple___Black_rot/ff4e792b-14c5-41db-af9e-0676abf8d20a___JR_FrgE.S_3088.JPG",
+      "expected": "Apple with Black Rot",
+      "predicted": "Apple with Black Rot",
+      "top3": [
+        "Apple with Black Rot",
+        "Cedar Apple Rust",
+        "Peach with Bacterial Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9984
+    },
+    {
+      "file": "Apple___Black_rot/ff7087a7-3388-45dc-a9e9-0aed99539223___JR_FrgE.S_2979.JPG",
+      "expected": "Apple with Black Rot",
+      "predicted": "Apple with Black Rot",
+      "top3": [
+        "Apple with Black Rot",
+        "Peach with Bacterial Spot",
+        "Healthy Peach Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9771
+    },
+    {
+      "file": "Apple___Cedar_apple_rust/fe8e7208-9986-428c-abff-98da6ba8809a___FREC_C.Rust_4161.JPG",
+      "expected": "Cedar Apple Rust",
+      "predicted": "Cedar Apple Rust",
+      "top3": [
+        "Cedar Apple Rust",
+        "Apple Scab",
+        "Corn (Maize) with Northern Leaf Blight"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.8246
+    },
+    {
+      "file": "Apple___Cedar_apple_rust/fec27618-f75c-4a6e-b2e7-d290fcb5b9bd___FREC_C.Rust_3550.JPG",
+      "expected": "Cedar Apple Rust",
+      "predicted": "Cedar Apple Rust",
+      "top3": [
+        "Cedar Apple Rust",
+        "Apple with Black Rot",
+        "Healthy Blueberry Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9535
+    },
+    {
+      "file": "Apple___Cedar_apple_rust/ffd73dc5-8b5b-4d7b-b44d-640ae3489190___FREC_C.Rust_9944.JPG",
+      "expected": "Cedar Apple Rust",
+      "predicted": "Cedar Apple Rust",
+      "top3": [
+        "Cedar Apple Rust",
+        "Peach with Bacterial Spot",
+        "Tomato with Bacterial Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9934
+    },
+    {
+      "file": "Apple___healthy/9871fd63-1ee8-436a-a1b3-c6104350400b___RS_HL_5693.JPG",
+      "expected": "Healthy Apple",
+      "predicted": "Healthy Bell Pepper Plant",
+      "top3": [
+        "Healthy Bell Pepper Plant",
+        "Healthy Apple",
+        "Healthy Soybean Plant"
+      ],
+      "top1": false,
+      "top3_ok": true,
+      "confidence": 0.3352
+    },
+    {
+      "file": "Apple___healthy/98834a65-1043-4c21-b06e-5f625274b0c4___RS_HL_6267.JPG",
+      "expected": "Healthy Apple",
+      "predicted": "Healthy Apple",
+      "top3": [
+        "Healthy Apple",
+        "Healthy Blueberry Plant",
+        "Apple Scab"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9957
+    },
+    {
+      "file": "Apple___healthy/98cfff90-4edc-4b41-b834-09d18d1c08ca___RS_HL_6142.JPG",
+      "expected": "Healthy Apple",
+      "predicted": "Healthy Apple",
+      "top3": [
+        "Healthy Apple",
+        "Healthy Peach Plant",
+        "Apple Scab"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.8553
+    },
+    {
+      "file": "Blueberry___healthy/adb262e1-4cac-4389-8c7b-fda07e2247fe___RS_HL_0623.JPG",
+      "expected": "Healthy Blueberry Plant",
+      "predicted": "Healthy Blueberry Plant",
+      "top3": [
+        "Healthy Blueberry Plant",
+        "Healthy Potato Plant",
+        "Orange with Citrus Greening"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9996
+    },
+    {
+      "file": "Blueberry___healthy/ae0b77d4-c2a2-4f33-9dc7-306e848da47b___RS_HL_4988.JPG",
+      "expected": "Healthy Blueberry Plant",
+      "predicted": "Healthy Blueberry Plant",
+      "top3": [
+        "Healthy Blueberry Plant",
+        "Healthy Bell Pepper Plant",
+        "Healthy Potato Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9994
+    },
+    {
+      "file": "Blueberry___healthy/ae343205-f55a-475f-ad68-a10d49285579___RS_HL_0467.JPG",
+      "expected": "Healthy Blueberry Plant",
+      "predicted": "Healthy Blueberry Plant",
+      "top3": [
+        "Healthy Blueberry Plant",
+        "Healthy Bell Pepper Plant",
+        "Healthy Cherry Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9984
+    },
+    {
+      "file": "Cherry_(including_sour)___Powdery_mildew/f4c7b253-a8f2-4c9d-8eae-78afa364b30a___FREC_Pwd.M_5092.JPG",
+      "expected": "Cherry with Powdery Mildew",
+      "predicted": "Cherry with Powdery Mildew",
+      "top3": [
+        "Cherry with Powdery Mildew",
+        "Healthy Bell Pepper Plant",
+        "Healthy Blueberry Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9999
+    },
+    {
+      "file": "Cherry_(including_sour)___Powdery_mildew/f4e8883a-b92b-449c-9f9f-447bc9b288c6___FREC_Pwd.M_4893.JPG",
+      "expected": "Cherry with Powdery Mildew",
+      "predicted": "Cherry with Powdery Mildew",
+      "top3": [
+        "Cherry with Powdery Mildew",
+        "Tomato with Late Blight",
+        "Tomato Yellow Leaf Curl Virus"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9997
+    },
+    {
+      "file": "Cherry_(including_sour)___Powdery_mildew/f50f0410-32ed-4012-85ed-9a1124cf6014___FREC_Pwd.M_4688.JPG",
+      "expected": "Cherry with Powdery Mildew",
+      "predicted": "Cherry with Powdery Mildew",
+      "top3": [
+        "Cherry with Powdery Mildew",
+        "Healthy Blueberry Plant",
+        "Cedar Apple Rust"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 1.0
+    },
+    {
+      "file": "Cherry_(including_sour)___healthy/feee45d9-e66f-499f-8ca9-e76881aa10ab___JR_HL_9756.JPG",
+      "expected": "Healthy Cherry Plant",
+      "predicted": "Healthy Cherry Plant",
+      "top3": [
+        "Healthy Cherry Plant",
+        "Healthy Bell Pepper Plant",
+        "Healthy Tomato Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9996
+    },
+    {
+      "file": "Cherry_(including_sour)___healthy/ff11a187-14dc-4743-9930-1e1cf276273b___JR_HL_4101.JPG",
+      "expected": "Healthy Cherry Plant",
+      "predicted": "Healthy Cherry Plant",
+      "top3": [
+        "Healthy Cherry Plant",
+        "Healthy Raspberry Plant",
+        "Healthy Bell Pepper Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9999
+    },
+    {
+      "file": "Cherry_(including_sour)___healthy/ffba4782-60e5-4757-9b77-32b08b670e0f___JR_HL_9601.JPG",
+      "expected": "Healthy Cherry Plant",
+      "predicted": "Healthy Cherry Plant",
+      "top3": [
+        "Healthy Cherry Plant",
+        "Healthy Bell Pepper Plant",
+        "Healthy Soybean Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9987
+    },
+    {
+      "file": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/ff4e775c-b6cb-455d-b4c9-b635025078c2___RS_GLSp_4562.JPG",
+      "expected": "Corn (Maize) with Cercospora and Gray Leaf Spot",
+      "predicted": "Corn (Maize) with Cercospora and Gray Leaf Spot",
+      "top3": [
+        "Corn (Maize) with Cercospora and Gray Leaf Spot",
+        "Corn (Maize) with Northern Leaf Blight",
+        "Corn (Maize) with Common Rust"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9268
+    },
+    {
+      "file": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/ff619f22-b7a3-422f-a410-6c7b244738f2___RS_GLSp_4615.JPG",
+      "expected": "Corn (Maize) with Cercospora and Gray Leaf Spot",
+      "predicted": "Corn (Maize) with Cercospora and Gray Leaf Spot",
+      "top3": [
+        "Corn (Maize) with Cercospora and Gray Leaf Spot",
+        "Corn (Maize) with Northern Leaf Blight",
+        "Corn (Maize) with Common Rust"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9958
+    },
+    {
+      "file": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/ff8671f5-09be-49d7-8093-2707c3a32489___RS_GLSp_4620.JPG",
+      "expected": "Corn (Maize) with Cercospora and Gray Leaf Spot",
+      "predicted": "Corn (Maize) with Cercospora and Gray Leaf Spot",
+      "top3": [
+        "Corn (Maize) with Cercospora and Gray Leaf Spot",
+        "Corn (Maize) with Northern Leaf Blight",
+        "Corn (Maize) with Common Rust"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.8148
+    },
+    {
+      "file": "Corn_(maize)___Common_rust_/RS_Rust_2575.JPG",
+      "expected": "Corn (Maize) with Common Rust",
+      "predicted": "Corn (Maize) with Common Rust",
+      "top3": [
+        "Corn (Maize) with Common Rust",
+        "Bell Pepper with Bacterial Spot",
+        "Corn (Maize) with Cercospora and Gray Leaf Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9999
+    },
+    {
+      "file": "Corn_(maize)___Common_rust_/RS_Rust_2576.JPG",
+      "expected": "Corn (Maize) with Common Rust",
+      "predicted": "Corn (Maize) with Common Rust",
+      "top3": [
+        "Corn (Maize) with Common Rust",
+        "Bell Pepper with Bacterial Spot",
+        "Corn (Maize) with Cercospora and Gray Leaf Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9999
+    },
+    {
+      "file": "Corn_(maize)___Common_rust_/RS_Rust_2577.JPG",
+      "expected": "Corn (Maize) with Common Rust",
+      "predicted": "Corn (Maize) with Common Rust",
+      "top3": [
+        "Corn (Maize) with Common Rust",
+        "Bell Pepper with Bacterial Spot",
+        "Corn (Maize) with Cercospora and Gray Leaf Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9998
+    },
+    {
+      "file": "Corn_(maize)___Northern_Leaf_Blight/ff8577c3-ad10-4272-84f6-b7c6d6042d1f___RS_NLB_3506.JPG",
+      "expected": "Corn (Maize) with Northern Leaf Blight",
+      "predicted": "Corn (Maize) with Northern Leaf Blight",
+      "top3": [
+        "Corn (Maize) with Northern Leaf Blight",
+        "Corn (Maize) with Cercospora and Gray Leaf Spot",
+        "Corn (Maize) with Common Rust"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9993
+    },
+    {
+      "file": "Corn_(maize)___Northern_Leaf_Blight/ffa82f14-8320-469b-a621-6475c92a4bb8___RS_NLB_3649.JPG",
+      "expected": "Corn (Maize) with Northern Leaf Blight",
+      "predicted": "Corn (Maize) with Northern Leaf Blight",
+      "top3": [
+        "Corn (Maize) with Northern Leaf Blight",
+        "Corn (Maize) with Common Rust",
+        "Corn (Maize) with Cercospora and Gray Leaf Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9377
+    },
+    {
+      "file": "Corn_(maize)___Northern_Leaf_Blight/ffbc3745-0a6d-4145-8f92-781edc626d9f___RS_NLB_4260.JPG",
+      "expected": "Corn (Maize) with Northern Leaf Blight",
+      "predicted": "Corn (Maize) with Northern Leaf Blight",
+      "top3": [
+        "Corn (Maize) with Northern Leaf Blight",
+        "Corn (Maize) with Cercospora and Gray Leaf Spot",
+        "Corn (Maize) with Common Rust"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9535
+    },
+    {
+      "file": "Corn_(maize)___healthy/d94448c4-ba78-4793-bd14-5d90e531e260___R.S_HL_7903_copy.jpg",
+      "expected": "Healthy Corn (Maize) Plant",
+      "predicted": "Healthy Corn (Maize) Plant",
+      "top3": [
+        "Healthy Corn (Maize) Plant",
+        "Corn (Maize) with Northern Leaf Blight",
+        "Corn (Maize) with Cercospora and Gray Leaf Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9998
+    },
+    {
+      "file": "Corn_(maize)___healthy/d94dfd11-4ccf-4d0a-a28b-8166ea4ed49d___R.S_HL_8120_copy.jpg",
+      "expected": "Healthy Corn (Maize) Plant",
+      "predicted": "Healthy Corn (Maize) Plant",
+      "top3": [
+        "Healthy Corn (Maize) Plant",
+        "Corn (Maize) with Cercospora and Gray Leaf Spot",
+        "Corn (Maize) with Northern Leaf Blight"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9974
+    },
+    {
+      "file": "Corn_(maize)___healthy/d96a3d7e-3c5d-4b22-9506-6451660bb8bf___R.S_HL_8182_copy_2.jpg",
+      "expected": "Healthy Corn (Maize) Plant",
+      "predicted": "Healthy Corn (Maize) Plant",
+      "top3": [
+        "Healthy Corn (Maize) Plant",
+        "Corn (Maize) with Common Rust",
+        "Corn (Maize) with Northern Leaf Blight"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9965
+    },
+    {
+      "file": "Grape___Black_rot/d4eef8d2-fff9-4f5c-b744-262e4f509d03___FAM_B.Rot_3111.JPG",
+      "expected": "Grape with Black Rot",
+      "predicted": "Grape with Black Rot",
+      "top3": [
+        "Grape with Black Rot",
+        "Grape with Esca (Black Measles)",
+        "Tomato with Septoria Leaf Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9994
+    },
+    {
+      "file": "Grape___Black_rot/d5222a7a-9aca-4c0e-9a62-061bfb9dbdd8___FAM_B.Rot_3501.JPG",
+      "expected": "Grape with Black Rot",
+      "predicted": "Grape with Black Rot",
+      "top3": [
+        "Grape with Black Rot",
+        "Grape with Esca (Black Measles)",
+        "Healthy Grape Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9992
+    },
+    {
+      "file": "Grape___Black_rot/d52dcf94-9f7f-4cb1-9f92-d8e258ee4ba1___FAM_B.Rot_0682.JPG",
+      "expected": "Grape with Black Rot",
+      "predicted": "Grape with Black Rot",
+      "top3": [
+        "Grape with Black Rot",
+        "Grape with Esca (Black Measles)",
+        "Apple Scab"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9995
+    },
+    {
+      "file": "Grape___Esca_(Black_Measles)/beab1f3f-2d0c-42bf-a2ad-9c8febc02bbc___FAM_B.Msls_3851.JPG",
+      "expected": "Grape with Esca (Black Measles)",
+      "predicted": "Grape with Esca (Black Measles)",
+      "top3": [
+        "Grape with Esca (Black Measles)",
+        "Apple with Black Rot",
+        "Strawberry with Leaf Scorch"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9964
+    },
+    {
+      "file": "Grape___Esca_(Black_Measles)/bebffac8-f730-4ac8-9b74-0f9c84dd6cdb___FAM_B.Msls_4006.JPG",
+      "expected": "Grape with Esca (Black Measles)",
+      "predicted": "Grape with Esca (Black Measles)",
+      "top3": [
+        "Grape with Esca (Black Measles)",
+        "Strawberry with Leaf Scorch",
+        "Grape with Black Rot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9983
+    },
+    {
+      "file": "Grape___Esca_(Black_Measles)/bed79e41-7214-47eb-8f98-5b2b5f5555c7___FAM_B.Msls_1038.JPG",
+      "expected": "Grape with Esca (Black Measles)",
+      "predicted": "Grape with Esca (Black Measles)",
+      "top3": [
+        "Grape with Esca (Black Measles)",
+        "Strawberry with Leaf Scorch",
+        "Apple with Black Rot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9939
+    },
+    {
+      "file": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/ed8e8b6d-07e5-4830-ae71-646cf41a9532___FAM_L.Blight_4687.JPG",
+      "expected": "Grape with Isariopsis Leaf Spot",
+      "predicted": "Grape with Isariopsis Leaf Spot",
+      "top3": [
+        "Grape with Isariopsis Leaf Spot",
+        "Strawberry with Leaf Scorch",
+        "Apple Scab"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9962
+    },
+    {
+      "file": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/edd39a41-593e-4093-b968-21b6c9957e9a___FAM_L.Blight_4833.JPG",
+      "expected": "Grape with Isariopsis Leaf Spot",
+      "predicted": "Grape with Isariopsis Leaf Spot",
+      "top3": [
+        "Grape with Isariopsis Leaf Spot",
+        "Potato with Late Blight",
+        "Healthy Potato Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.8219
+    },
+    {
+      "file": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/edd9b7ce-dc36-4de7-bd53-1a074a07deb3___FAM_L.Blight_4766.JPG",
+      "expected": "Grape with Isariopsis Leaf Spot",
+      "predicted": "Grape with Isariopsis Leaf Spot",
+      "top3": [
+        "Grape with Isariopsis Leaf Spot",
+        "Tomato with Septoria Leaf Spot",
+        "Potato with Early Blight"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9681
+    },
+    {
+      "file": "Grape___healthy/fed74aa9-511b-4958-824b-41066b2e5406___Mt.N.V_HL_8918.JPG",
+      "expected": "Healthy Grape Plant",
+      "predicted": "Healthy Grape Plant",
+      "top3": [
+        "Healthy Grape Plant",
+        "Healthy Cherry Plant",
+        "Grape with Black Rot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9903
+    },
+    {
+      "file": "Grape___healthy/fefb8922-dcb4-4dbf-8777-237ad9a99c40___Mt.N.V_HL_6085.JPG",
+      "expected": "Healthy Grape Plant",
+      "predicted": "Healthy Grape Plant",
+      "top3": [
+        "Healthy Grape Plant",
+        "Healthy Cherry Plant",
+        "Apple Scab"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9988
+    },
+    {
+      "file": "Grape___healthy/ff99a93a-ec9b-4a6d-a5e1-1a015cada478___Mt.N.V_HL_9057.JPG",
+      "expected": "Healthy Grape Plant",
+      "predicted": "Healthy Grape Plant",
+      "top3": [
+        "Healthy Grape Plant",
+        "Apple with Black Rot",
+        "Grape with Black Rot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9998
+    },
+    {
+      "file": "Orange___Haunglongbing_(Citrus_greening)/2f553395-d53f-4e9b-ac4f-cb60a5a379fa___UF.Citrus_HLB_Lab_0127.JPG",
+      "expected": "Orange with Citrus Greening",
+      "predicted": "Orange with Citrus Greening",
+      "top3": [
+        "Orange with Citrus Greening",
+        "Healthy Bell Pepper Plant",
+        "Tomato Yellow Leaf Curl Virus"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9998
+    },
+    {
+      "file": "Orange___Haunglongbing_(Citrus_greening)/2f591db6-4bbd-4020-aa0b-0265ef472f11___UF.Citrus_HLB_Lab_9650.JPG",
+      "expected": "Orange with Citrus Greening",
+      "predicted": "Orange with Citrus Greening",
+      "top3": [
+        "Orange with Citrus Greening",
+        "Tomato Yellow Leaf Curl Virus",
+        "Healthy Bell Pepper Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 1.0
+    },
+    {
+      "file": "Orange___Haunglongbing_(Citrus_greening)/2f62cf99-54b5-4a39-b8c4-9dad908b3b61___CREC_HLB_5436.JPG",
+      "expected": "Orange with Citrus Greening",
+      "predicted": "Orange with Citrus Greening",
+      "top3": [
+        "Orange with Citrus Greening",
+        "Healthy Bell Pepper Plant",
+        "Healthy Blueberry Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 1.0
+    },
+    {
+      "file": "Peach___Bacterial_spot/720c6692-2a5a-4a45-85d4-568dd7300363___Rutg._Bact.S_1446.JPG",
+      "expected": "Peach with Bacterial Spot",
+      "predicted": "Peach with Bacterial Spot",
+      "top3": [
+        "Peach with Bacterial Spot",
+        "Bell Pepper with Bacterial Spot",
+        "Healthy Peach Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9999
+    },
+    {
+      "file": "Peach___Bacterial_spot/7239becc-a5ad-4297-8eb5-99a624d8bc15___Rut._Bact.S_1349.JPG",
+      "expected": "Peach with Bacterial Spot",
+      "predicted": "Peach with Bacterial Spot",
+      "top3": [
+        "Peach with Bacterial Spot",
+        "Apple with Black Rot",
+        "Bell Pepper with Bacterial Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 1.0
+    },
+    {
+      "file": "Peach___Bacterial_spot/7247621f-9e08-47f8-81aa-ed3965dfeae5___Rutg._Bact.S_1974.JPG",
+      "expected": "Peach with Bacterial Spot",
+      "predicted": "Peach with Bacterial Spot",
+      "top3": [
+        "Peach with Bacterial Spot",
+        "Bell Pepper with Bacterial Spot",
+        "Tomato with Septoria Leaf Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.999
+    },
+    {
+      "file": "Peach___healthy/fcec3f5b-0a84-4635-abc6-a2bc6464de6d___Rutg._HL_3644.JPG",
+      "expected": "Healthy Peach Plant",
+      "predicted": "Healthy Peach Plant",
+      "top3": [
+        "Healthy Peach Plant",
+        "Healthy Apple",
+        "Peach with Bacterial Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.998
+    },
+    {
+      "file": "Peach___healthy/fd40d2b0-c139-4661-973f-7c5ee06a55a2___Rutg._HL_3597.JPG",
+      "expected": "Healthy Peach Plant",
+      "predicted": "Healthy Peach Plant",
+      "top3": [
+        "Healthy Peach Plant",
+        "Peach with Bacterial Spot",
+        "Healthy Apple"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9918
+    },
+    {
+      "file": "Peach___healthy/fe3bc54d-4164-4fea-a0bd-d96299ab3422___Rutg._HL_3578.JPG",
+      "expected": "Healthy Peach Plant",
+      "predicted": "Healthy Peach Plant",
+      "top3": [
+        "Healthy Peach Plant",
+        "Peach with Bacterial Spot",
+        "Bell Pepper with Bacterial Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9994
+    },
+    {
+      "file": "Pepper,_bell___Bacterial_spot/ff7d08df-7fca-4a2e-a2f4-b196a19e6442___JR_B.Spot_3237.JPG",
+      "expected": "Bell Pepper with Bacterial Spot",
+      "predicted": "Bell Pepper with Bacterial Spot",
+      "top3": [
+        "Bell Pepper with Bacterial Spot",
+        "Healthy Bell Pepper Plant",
+        "Orange with Citrus Greening"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.6551
+    },
+    {
+      "file": "Pepper,_bell___Bacterial_spot/ff81e22a-09bf-49bd-b45a-c75606cd113b___NREC_B.Spot_1811.JPG",
+      "expected": "Bell Pepper with Bacterial Spot",
+      "predicted": "Bell Pepper with Bacterial Spot",
+      "top3": [
+        "Bell Pepper with Bacterial Spot",
+        "Healthy Blueberry Plant",
+        "Tomato with Early Blight"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9999
+    },
+    {
+      "file": "Pepper,_bell___Bacterial_spot/ffa3b1df-49c6-4fd2-9ec5-1ca5eb175797___JR_B.Spot_3254.JPG",
+      "expected": "Bell Pepper with Bacterial Spot",
+      "predicted": "Bell Pepper with Bacterial Spot",
+      "top3": [
+        "Bell Pepper with Bacterial Spot",
+        "Healthy Bell Pepper Plant",
+        "Tomato with Early Blight"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.6958
+    },
+    {
+      "file": "Pepper,_bell___healthy/adb7a855-3b4f-4c7d-978d-b79e5b7cc101___JR_HL_7908.JPG",
+      "expected": "Healthy Bell Pepper Plant",
+      "predicted": "Healthy Bell Pepper Plant",
+      "top3": [
+        "Healthy Bell Pepper Plant",
+        "Bell Pepper with Bacterial Spot",
+        "Healthy Peach Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9991
+    },
+    {
+      "file": "Pepper,_bell___healthy/ade83a82-f521-48d3-acde-24d5ad677350___JR_HL_7764.JPG",
+      "expected": "Healthy Bell Pepper Plant",
+      "predicted": "Healthy Bell Pepper Plant",
+      "top3": [
+        "Healthy Bell Pepper Plant",
+        "Bell Pepper with Bacterial Spot",
+        "Healthy Soybean Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9999
+    },
+    {
+      "file": "Pepper,_bell___healthy/adfb71bc-0635-4828-9036-6cc2027223c6___JR_HL_8588.JPG",
+      "expected": "Healthy Bell Pepper Plant",
+      "predicted": "Healthy Bell Pepper Plant",
+      "top3": [
+        "Healthy Bell Pepper Plant",
+        "Bell Pepper with Bacterial Spot",
+        "Healthy Soybean Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9997
+    },
+    {
+      "file": "Potato___Early_blight/fe2a7818-f2ec-4255-93f0-586c88a41624___RS_Early.B_7043.JPG",
+      "expected": "Potato with Early Blight",
+      "predicted": "Potato with Early Blight",
+      "top3": [
+        "Potato with Early Blight",
+        "Tomato with Early Blight",
+        "Bell Pepper with Bacterial Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9946
+    },
+    {
+      "file": "Potato___Early_blight/fe772b3d-351c-4d18-9dcb-26feb90afa0d___RS_Early.B_7456.JPG",
+      "expected": "Potato with Early Blight",
+      "predicted": "Potato with Early Blight",
+      "top3": [
+        "Potato with Early Blight",
+        "Bell Pepper with Bacterial Spot",
+        "Potato with Late Blight"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9878
+    },
+    {
+      "file": "Potato___Early_blight/ffef8a3b-3e8a-4c24-a27e-64c41708f7a0___RS_Early.B_7132.JPG",
+      "expected": "Potato with Early Blight",
+      "predicted": "Potato with Early Blight",
+      "top3": [
+        "Potato with Early Blight",
+        "Bell Pepper with Bacterial Spot",
+        "Tomato with Early Blight"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.977
+    },
+    {
+      "file": "Potato___Late_blight/ff03a125-445b-40e1-a7ed-0bb9b155dfd8___RS_LB_5039.JPG",
+      "expected": "Potato with Late Blight",
+      "predicted": "Potato with Late Blight",
+      "top3": [
+        "Potato with Late Blight",
+        "Potato with Early Blight",
+        "Healthy Potato Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.867
+    },
+    {
+      "file": "Potato___Late_blight/ff7160f9-f8d7-4576-82b8-009bf1b63b3b___RS_LB_4974.JPG",
+      "expected": "Potato with Late Blight",
+      "predicted": "Potato with Late Blight",
+      "top3": [
+        "Potato with Late Blight",
+        "Potato with Early Blight",
+        "Healthy Potato Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9904
+    },
+    {
+      "file": "Potato___Late_blight/fff55a7e-2f86-4747-8d31-f1fde3c307aa___RS_LB_3081.JPG",
+      "expected": "Potato with Late Blight",
+      "predicted": "Potato with Late Blight",
+      "top3": [
+        "Potato with Late Blight",
+        "Tomato with Late Blight",
+        "Tomato with Early Blight"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.6016
+    },
+    {
+      "file": "Potato___healthy/f66af6c0-6fc6-4020-b1de-a73685d497c2___RS_HL_4181.JPG",
+      "expected": "Healthy Potato Plant",
+      "predicted": "Healthy Potato Plant",
+      "top3": [
+        "Healthy Potato Plant",
+        "Healthy Soybean Plant",
+        "Potato with Late Blight"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9885
+    },
+    {
+      "file": "Potato___healthy/fd92bd9c-02cb-4599-8673-9316159504a1___RS_HL_1927.JPG",
+      "expected": "Healthy Potato Plant",
+      "predicted": "Healthy Soybean Plant",
+      "top3": [
+        "Healthy Soybean Plant",
+        "Healthy Potato Plant",
+        "Healthy Bell Pepper Plant"
+      ],
+      "top1": false,
+      "top3_ok": true,
+      "confidence": 0.7468
+    },
+    {
+      "file": "Potato___healthy/ff700844-68ad-4e99-8427-58a39c07f817___RS_HL_1860.JPG",
+      "expected": "Healthy Potato Plant",
+      "predicted": "Healthy Soybean Plant",
+      "top3": [
+        "Healthy Soybean Plant",
+        "Healthy Potato Plant",
+        "Healthy Cherry Plant"
+      ],
+      "top1": false,
+      "top3_ok": true,
+      "confidence": 0.7697
+    },
+    {
+      "file": "Raspberry___healthy/fce85cdb-dc7f-4523-b675-1a962f794518___Mary_HL_6404.JPG",
+      "expected": "Healthy Raspberry Plant",
+      "predicted": "Healthy Raspberry Plant",
+      "top3": [
+        "Healthy Raspberry Plant",
+        "Healthy Strawberry Plant",
+        "Healthy Cherry Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9962
+    },
+    {
+      "file": "Raspberry___healthy/fe1c1683-06cc-49c5-b86a-a41fb36f058b___Mary_HL_6249.JPG",
+      "expected": "Healthy Raspberry Plant",
+      "predicted": "Healthy Raspberry Plant",
+      "top3": [
+        "Healthy Raspberry Plant",
+        "Healthy Cherry Plant",
+        "Healthy Strawberry Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9931
+    },
+    {
+      "file": "Raspberry___healthy/fe5ab322-74b0-46c4-a11a-384c6ce0040c___Mary_HL_9355.JPG",
+      "expected": "Healthy Raspberry Plant",
+      "predicted": "Healthy Raspberry Plant",
+      "top3": [
+        "Healthy Raspberry Plant",
+        "Healthy Cherry Plant",
+        "Healthy Strawberry Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.5186
+    },
+    {
+      "file": "Soybean___healthy/32760540-41c8-43cf-ba5b-e74ba18048e5___RS_HL_2856.JPG",
+      "expected": "Healthy Soybean Plant",
+      "predicted": "Healthy Soybean Plant",
+      "top3": [
+        "Healthy Soybean Plant",
+        "Healthy Bell Pepper Plant",
+        "Healthy Potato Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.998
+    },
+    {
+      "file": "Soybean___healthy/327a6ef5-ed9c-4987-a209-450af4d8e4a3___RS_HL_7406.JPG",
+      "expected": "Healthy Soybean Plant",
+      "predicted": "Healthy Bell Pepper Plant",
+      "top3": [
+        "Healthy Bell Pepper Plant",
+        "Healthy Soybean Plant",
+        "Orange with Citrus Greening"
+      ],
+      "top1": false,
+      "top3_ok": true,
+      "confidence": 0.8663
+    },
+    {
+      "file": "Soybean___healthy/327c1e8b-0aec-4e49-b66b-8e53971506c0___RS_HL_6868.JPG",
+      "expected": "Healthy Soybean Plant",
+      "predicted": "Healthy Soybean Plant",
+      "top3": [
+        "Healthy Soybean Plant",
+        "Healthy Bell Pepper Plant",
+        "Orange with Citrus Greening"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9518
+    },
+    {
+      "file": "Squash___Powdery_mildew/92769e5a-979c-427c-8233-e0cb00fb5e9a___UMD_Powd.M_0413.JPG",
+      "expected": "Squash with Powdery Mildew",
+      "predicted": "Squash with Powdery Mildew",
+      "top3": [
+        "Squash with Powdery Mildew",
+        "Healthy Strawberry Plant",
+        "Healthy Tomato Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9998
+    },
+    {
+      "file": "Squash___Powdery_mildew/929ece4e-03af-4987-8d8f-ee711f16a850___MD_Powd.M_0880.JPG",
+      "expected": "Squash with Powdery Mildew",
+      "predicted": "Squash with Powdery Mildew",
+      "top3": [
+        "Squash with Powdery Mildew",
+        "Healthy Tomato Plant",
+        "Healthy Strawberry Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9982
+    },
+    {
+      "file": "Squash___Powdery_mildew/92b6710a-7b86-487a-b5a9-ab0529d21b33___UMD_Powd.M_0296.JPG",
+      "expected": "Squash with Powdery Mildew",
+      "predicted": "Squash with Powdery Mildew",
+      "top3": [
+        "Squash with Powdery Mildew",
+        "Healthy Tomato Plant",
+        "Healthy Strawberry Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9999
+    },
+    {
+      "file": "Strawberry___Leaf_scorch/e5fb7942-bb5d-49f8-8cc1-80b469af95fd___RS_L.Scorch_1138.JPG",
+      "expected": "Strawberry with Leaf Scorch",
+      "predicted": "Strawberry with Leaf Scorch",
+      "top3": [
+        "Strawberry with Leaf Scorch",
+        "Potato with Early Blight",
+        "Tomato with Septoria Leaf Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9998
+    },
+    {
+      "file": "Strawberry___Leaf_scorch/e609db4a-77b0-4f0d-9a36-74b63fa785ab___RS_L.Scorch_1589.JPG",
+      "expected": "Strawberry with Leaf Scorch",
+      "predicted": "Strawberry with Leaf Scorch",
+      "top3": [
+        "Strawberry with Leaf Scorch",
+        "Grape with Esca (Black Measles)",
+        "Tomato with Septoria Leaf Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9982
+    },
+    {
+      "file": "Strawberry___Leaf_scorch/e60ec849-18a8-4dec-8d0f-dccdcd574cda___RS_L.Scorch_0785.JPG",
+      "expected": "Strawberry with Leaf Scorch",
+      "predicted": "Strawberry with Leaf Scorch",
+      "top3": [
+        "Strawberry with Leaf Scorch",
+        "Grape with Esca (Black Measles)",
+        "Tomato with Septoria Leaf Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9998
+    },
+    {
+      "file": "Strawberry___healthy/feea7aff-b70c-46dd-8ff4-be06e7920fa9___RS_HL_1807.JPG",
+      "expected": "Healthy Strawberry Plant",
+      "predicted": "Healthy Strawberry Plant",
+      "top3": [
+        "Healthy Strawberry Plant",
+        "Healthy Tomato Plant",
+        "Healthy Bell Pepper Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9975
+    },
+    {
+      "file": "Strawberry___healthy/ff7ccace-1453-44e8-8580-3263c2952ea8___RS_HL_2006.JPG",
+      "expected": "Healthy Strawberry Plant",
+      "predicted": "Healthy Strawberry Plant",
+      "top3": [
+        "Healthy Strawberry Plant",
+        "Tomato with Target Spot",
+        "Healthy Tomato Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9946
+    },
+    {
+      "file": "Strawberry___healthy/ffc5256e-56f2-4448-827a-81bbd1b06be6___RS_HL_4574.JPG",
+      "expected": "Healthy Strawberry Plant",
+      "predicted": "Healthy Strawberry Plant",
+      "top3": [
+        "Healthy Strawberry Plant",
+        "Healthy Tomato Plant",
+        "Healthy Potato Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9755
+    },
+    {
+      "file": "Tomato___Bacterial_spot/7e7479df-7aac-4b5f-9724-db28ca442a74___GCREC_Bact.Sp_3215.JPG",
+      "expected": "Tomato with Bacterial Spot",
+      "predicted": "Tomato with Bacterial Spot",
+      "top3": [
+        "Tomato with Bacterial Spot",
+        "Tomato with Target Spot",
+        "Tomato Yellow Leaf Curl Virus"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9982
+    },
+    {
+      "file": "Tomato___Bacterial_spot/7e7fb1e0-cb8f-43b3-819f-96b4c14b85b1___GCREC_Bact.Sp_3431.JPG",
+      "expected": "Tomato with Bacterial Spot",
+      "predicted": "Tomato with Bacterial Spot",
+      "top3": [
+        "Tomato with Bacterial Spot",
+        "Tomato with Septoria Leaf Spot",
+        "Tomato with Early Blight"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9869
+    },
+    {
+      "file": "Tomato___Bacterial_spot/7e863179-3ff3-48e9-8f84-92ec9957e7f3___GCREC_Bact.Sp_6071.JPG",
+      "expected": "Tomato with Bacterial Spot",
+      "predicted": "Tomato with Bacterial Spot",
+      "top3": [
+        "Tomato with Bacterial Spot",
+        "Peach with Bacterial Spot",
+        "Tomato with Early Blight"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9965
+    },
+    {
+      "file": "Tomato___Early_blight/fee744d4-d0e5-439d-8b7b-04f8394251e8___RS_Erly.B_7396.JPG",
+      "expected": "Tomato with Early Blight",
+      "predicted": "Tomato with Early Blight",
+      "top3": [
+        "Tomato with Early Blight",
+        "Tomato with Late Blight",
+        "Tomato with Bacterial Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9778
+    },
+    {
+      "file": "Tomato___Early_blight/ff422d28-d002-4382-80bf-30f78f66c677___RS_Erly.B_6492.JPG",
+      "expected": "Tomato with Early Blight",
+      "predicted": "Tomato with Early Blight",
+      "top3": [
+        "Tomato with Early Blight",
+        "Tomato with Leaf Mold",
+        "Tomato with Late Blight"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9865
+    },
+    {
+      "file": "Tomato___Early_blight/ff83852f-65e0-4981-8c66-6b86d34b32c2___RS_Erly.B_9582.JPG",
+      "expected": "Tomato with Early Blight",
+      "predicted": "Tomato with Early Blight",
+      "top3": [
+        "Tomato with Early Blight",
+        "Tomato with Bacterial Spot",
+        "Tomato with Target Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9722
+    },
+    {
+      "file": "Tomato___Late_blight/87815762-3104-4c15-96c5-238ecda66998___GHLB2_Leaf_124.2.JPG",
+      "expected": "Tomato with Late Blight",
+      "predicted": "Tomato with Late Blight",
+      "top3": [
+        "Tomato with Late Blight",
+        "Orange with Citrus Greening",
+        "Tomato Yellow Leaf Curl Virus"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9269
+    },
+    {
+      "file": "Tomato___Late_blight/87f47869-cd63-494b-813d-4355a11c01d5___RS_Late.B_6629.JPG",
+      "expected": "Tomato with Late Blight",
+      "predicted": "Tomato with Early Blight",
+      "top3": [
+        "Tomato with Early Blight",
+        "Tomato with Late Blight",
+        "Potato with Early Blight"
+      ],
+      "top1": false,
+      "top3_ok": true,
+      "confidence": 0.6179
+    },
+    {
+      "file": "Tomato___Late_blight/8826e278-b47e-4d1a-b7af-3dc1b77ef445___GHLB2_Leaf_8924.JPG",
+      "expected": "Tomato with Late Blight",
+      "predicted": "Tomato with Late Blight",
+      "top3": [
+        "Tomato with Late Blight",
+        "Tomato with Leaf Mold",
+        "Tomato with Early Blight"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9999
+    },
+    {
+      "file": "Tomato___Leaf_Mold/fef7ee3c-0242-4054-ab99-c010ceda9836___Crnl_L.Mold_9025.JPG",
+      "expected": "Tomato with Leaf Mold",
+      "predicted": "Tomato with Leaf Mold",
+      "top3": [
+        "Tomato with Leaf Mold",
+        "Tomato with Late Blight",
+        "Tomato with Early Blight"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9963
+    },
+    {
+      "file": "Tomato___Leaf_Mold/ff01be71-2cc9-4e83-b907-81c21d31983b___Crnl_L.Mold_9117.JPG",
+      "expected": "Tomato with Leaf Mold",
+      "predicted": "Tomato with Leaf Mold",
+      "top3": [
+        "Tomato with Leaf Mold",
+        "Tomato with Late Blight",
+        "Potato with Late Blight"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9778
+    },
+    {
+      "file": "Tomato___Leaf_Mold/ffb2d848-e46c-485c-a633-8d6137dd3dbf___Crnl_L.Mold_8735.JPG",
+      "expected": "Tomato with Leaf Mold",
+      "predicted": "Tomato with Leaf Mold",
+      "top3": [
+        "Tomato with Leaf Mold",
+        "Tomato with Late Blight",
+        "Tomato with Septoria Leaf Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9994
+    },
+    {
+      "file": "Tomato___Septoria_leaf_spot/9604c3d8-1ccd-4aea-8e31-b90ad17bdae1___JR_Sept.L.S_8406.JPG",
+      "expected": "Tomato with Septoria Leaf Spot",
+      "predicted": "Tomato with Early Blight",
+      "top3": [
+        "Tomato with Early Blight",
+        "Tomato with Septoria Leaf Spot",
+        "Tomato with Late Blight"
+      ],
+      "top1": false,
+      "top3_ok": true,
+      "confidence": 0.5057
+    },
+    {
+      "file": "Tomato___Septoria_leaf_spot/96090c07-dbf5-46e4-94bf-bf0d06cdf907___Matt.S_CG_7796.JPG",
+      "expected": "Tomato with Septoria Leaf Spot",
+      "predicted": "Bell Pepper with Bacterial Spot",
+      "top3": [
+        "Bell Pepper with Bacterial Spot",
+        "Tomato with Septoria Leaf Spot",
+        "Tomato with Target Spot"
+      ],
+      "top1": false,
+      "top3_ok": true,
+      "confidence": 0.9188
+    },
+    {
+      "file": "Tomato___Septoria_leaf_spot/962119e0-4165-4c4e-bf7e-fd68f89e4e6b___Keller.St_CG_2016.JPG",
+      "expected": "Tomato with Septoria Leaf Spot",
+      "predicted": "Tomato with Septoria Leaf Spot",
+      "top3": [
+        "Tomato with Septoria Leaf Spot",
+        "Tomato with Early Blight",
+        "Tomato with Target Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9994
+    },
+    {
+      "file": "Tomato___Spider_mites Two-spotted_spider_mite/9b55aea9-85fc-418b-b1a7-ae919f37d2fc___Com.G_SpM_FL_9401.JPG",
+      "expected": "Tomato with Spider Mites or Two-spotted Spider Mite",
+      "predicted": "Tomato with Spider Mites or Two-spotted Spider Mite",
+      "top3": [
+        "Tomato with Spider Mites or Two-spotted Spider Mite",
+        "Tomato with Target Spot",
+        "Healthy Tomato Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9931
+    },
+    {
+      "file": "Tomato___Spider_mites Two-spotted_spider_mite/9b663836-f45a-4049-a0f5-35a0b3225e42___Com.G_SpM_FL_9309.JPG",
+      "expected": "Tomato with Spider Mites or Two-spotted Spider Mite",
+      "predicted": "Healthy Bell Pepper Plant",
+      "top3": [
+        "Healthy Bell Pepper Plant",
+        "Tomato with Spider Mites or Two-spotted Spider Mite",
+        "Orange with Citrus Greening"
+      ],
+      "top1": false,
+      "top3_ok": true,
+      "confidence": 0.358
+    },
+    {
+      "file": "Tomato___Spider_mites Two-spotted_spider_mite/9b6eb8d6-6649-4a39-8c45-41e63bf649ed___Com.G_SpM_FL_9572.JPG",
+      "expected": "Tomato with Spider Mites or Two-spotted Spider Mite",
+      "predicted": "Tomato with Spider Mites or Two-spotted Spider Mite",
+      "top3": [
+        "Tomato with Spider Mites or Two-spotted Spider Mite",
+        "Tomato with Target Spot",
+        "Tomato with Leaf Mold"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9943
+    },
+    {
+      "file": "Tomato___Target_Spot/bc3558d7-913d-4364-a13c-71830f43f504___Com.G_TgS_FL_8373.JPG",
+      "expected": "Tomato with Target Spot",
+      "predicted": "Tomato with Target Spot",
+      "top3": [
+        "Tomato with Target Spot",
+        "Tomato with Spider Mites or Two-spotted Spider Mite",
+        "Healthy Tomato Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9256
+    },
+    {
+      "file": "Tomato___Target_Spot/bcdd0062-f5b6-4b26-b2e4-fd855c2c65ec___Com.G_TgS_FL_1119.JPG",
+      "expected": "Tomato with Target Spot",
+      "predicted": "Tomato with Target Spot",
+      "top3": [
+        "Tomato with Target Spot",
+        "Healthy Tomato Plant",
+        "Tomato with Early Blight"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.6931
+    },
+    {
+      "file": "Tomato___Target_Spot/bcf39621-3b6e-4211-8676-011dae6c529e___Com.G_TgS_FL_0990.JPG",
+      "expected": "Tomato with Target Spot",
+      "predicted": "Tomato with Target Spot",
+      "top3": [
+        "Tomato with Target Spot",
+        "Tomato with Early Blight",
+        "Tomato with Septoria Leaf Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9978
+    },
+    {
+      "file": "Tomato___Tomato_Yellow_Leaf_Curl_Virus/2f25b035-c006-4e32-b23c-c0b1a0643efb___UF.GRC_YLCV_Lab_02319.JPG",
+      "expected": "Tomato Yellow Leaf Curl Virus",
+      "predicted": "Tomato Yellow Leaf Curl Virus",
+      "top3": [
+        "Tomato Yellow Leaf Curl Virus",
+        "Orange with Citrus Greening",
+        "Cherry with Powdery Mildew"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 1.0
+    },
+    {
+      "file": "Tomato___Tomato_Yellow_Leaf_Curl_Virus/2f2c0384-0669-4294-bba1-553040bb0554___UF.GRC_YLCV_Lab_01826.JPG",
+      "expected": "Tomato Yellow Leaf Curl Virus",
+      "predicted": "Tomato Yellow Leaf Curl Virus",
+      "top3": [
+        "Tomato Yellow Leaf Curl Virus",
+        "Tomato with Bacterial Spot",
+        "Tomato Mosaic Virus"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9999
+    },
+    {
+      "file": "Tomato___Tomato_Yellow_Leaf_Curl_Virus/2f2d8352-ad80-4799-8082-f496604c2716___UF.GRC_YLCV_Lab_01901.JPG",
+      "expected": "Tomato Yellow Leaf Curl Virus",
+      "predicted": "Tomato Yellow Leaf Curl Virus",
+      "top3": [
+        "Tomato Yellow Leaf Curl Virus",
+        "Orange with Citrus Greening",
+        "Healthy Corn (Maize) Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9999
+    },
+    {
+      "file": "Tomato___Tomato_mosaic_virus/fcf80369-b340-4a7c-becc-8a600eb73447___PSU_CG_2175.JPG",
+      "expected": "Tomato Mosaic Virus",
+      "predicted": "Tomato Mosaic Virus",
+      "top3": [
+        "Tomato Mosaic Virus",
+        "Tomato Yellow Leaf Curl Virus",
+        "Tomato with Spider Mites or Two-spotted Spider Mite"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9524
+    },
+    {
+      "file": "Tomato___Tomato_mosaic_virus/feabce4c-9bb1-4fca-bcbf-368cacd40a68___PSU_CG_2115.JPG",
+      "expected": "Tomato Mosaic Virus",
+      "predicted": "Tomato Mosaic Virus",
+      "top3": [
+        "Tomato Mosaic Virus",
+        "Tomato with Spider Mites or Two-spotted Spider Mite",
+        "Healthy Tomato Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9424
+    },
+    {
+      "file": "Tomato___Tomato_mosaic_virus/ffdb355f-1de6-4217-8aac-6695ee621512___PSU_CG_2342.JPG",
+      "expected": "Tomato Mosaic Virus",
+      "predicted": "Tomato Mosaic Virus",
+      "top3": [
+        "Tomato Mosaic Virus",
+        "Tomato with Septoria Leaf Spot",
+        "Tomato Yellow Leaf Curl Virus"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9991
+    },
+    {
+      "file": "Tomato___healthy/9d197d8a-3f35-401a-8aa4-39f7e69d05c5___GH_HL_Leaf_326.JPG",
+      "expected": "Healthy Tomato Plant",
+      "predicted": "Healthy Tomato Plant",
+      "top3": [
+        "Healthy Tomato Plant",
+        "Squash with Powdery Mildew",
+        "Tomato with Target Spot"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9999
+    },
+    {
+      "file": "Tomato___healthy/9d447b38-bd33-46f0-880b-324481fbae19___RS_HL_0366.JPG",
+      "expected": "Healthy Tomato Plant",
+      "predicted": "Healthy Tomato Plant",
+      "top3": [
+        "Healthy Tomato Plant",
+        "Tomato with Target Spot",
+        "Tomato with Early Blight"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9993
+    },
+    {
+      "file": "Tomato___healthy/9d59d9f3-d9f2-45e7-b441-bcf453ceea73___RS_HL_0329.JPG",
+      "expected": "Healthy Tomato Plant",
+      "predicted": "Healthy Tomato Plant",
+      "top3": [
+        "Healthy Tomato Plant",
+        "Tomato with Target Spot",
+        "Healthy Strawberry Plant"
+      ],
+      "top1": true,
+      "top3_ok": true,
+      "confidence": 0.9999
+    }
+  ]
+}

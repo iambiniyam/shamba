@@ -10,3 +10,5 @@ models/
 *.onnx
 .DS_Store
 .env
+
+data/eval/

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.0 - 2026-10-18
+
+- Rebuilt the web interface with a phone camera first flow, drag and drop, paste, preview, top-three cards, confidence bars, and treatment sections.
+- Added automatic dark mode, keyboard access, loading states, error recovery, and mobile layouts.
+- Model now reads mean and std from each model's `preprocessor_config.json`.
+- Fixed a normalization bug that lowered MobileNetV2 top-1 accuracy from 0.921 to 0.597.
+- Added a 114-image held-out evaluation for DINOv2 and MobileNetV2.
+- DINOv2 scored 1.000 top-1 and 1.000 top-3 on the held-out sample.
+
 ## 0.1.1 - 2026-10-18
 
 - Fix wheel builds by removing a duplicate data include.

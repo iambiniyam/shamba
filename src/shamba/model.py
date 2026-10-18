@@ -13,8 +13,8 @@ from PIL import Image
 from .config import Paths
 from .labels import LabelInfo, parse_label
 
-MEAN = np.array([0.485, 0.456, 0.406], dtype=np.float32)
-STD = np.array([0.229, 0.224, 0.225], dtype=np.float32)
+MEAN = np.array([0.5, 0.5, 0.5], dtype=np.float32)
+STD = np.array([0.5, 0.5, 0.5], dtype=np.float32)
 RESIZE = 256
 CROP = 224
 
@@ -39,7 +39,11 @@ class Prediction:
         }
 
 
-def preprocess(image: Image.Image) -> np.ndarray:
+def preprocess(
+    image: Image.Image,
+    mean: np.ndarray = MEAN,
+    std: np.ndarray = STD,
+) -> np.ndarray:
     image = image.convert("RGB")
     width, height = image.size
     scale = RESIZE / min(width, height)
@@ -49,7 +53,7 @@ def preprocess(image: Image.Image) -> np.ndarray:
     cropped = resized.crop((left, top, left + CROP, top + CROP))
 
     array = np.asarray(cropped, dtype=np.float32) / 255.0
-    array = (array - MEAN) / STD
+    array = (array - mean) / std
     return np.transpose(array, (2, 0, 1))[None, ...]
 
 
@@ -85,8 +89,17 @@ class PlantDiseaseModel:
         raw_labels = {int(key): value for key, value in config["id2label"].items()}
         self.labels = {index: parse_label(raw) for index, raw in raw_labels.items()}
 
+        preprocessor_path = self.model_path.parent / "preprocessor_config.json"
+        if preprocessor_path.exists():
+            preprocessor = json.loads(preprocessor_path.read_text(encoding="utf-8"))
+            self.mean = np.array(preprocessor.get("image_mean", MEAN), dtype=np.float32)
+            self.std = np.array(preprocessor.get("image_std", STD), dtype=np.float32)
+        else:
+            self.mean = MEAN
+            self.std = STD
+
     def predict(self, image: Image.Image, top_k: int = 3) -> list[Prediction]:
-        batch = preprocess(image)
+        batch = preprocess(image, self.mean, self.std)
         logits = self.session.run(None, {self.input_name: batch})[0][0]
         probabilities = softmax(logits.astype(np.float32))
         best = np.argsort(probabilities)[::-1][:top_k]

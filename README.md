@@ -9,7 +9,7 @@ Take one clear photo of a leaf. shamba returns the three most likely crop diseas
 
 ![shamba web UI](docs/demo.png)
 
-Status: early MVP. It works well on PlantVillage-style lab photos. Field photos are the next milestone.
+Status: v0.2.0. It works well on PlantVillage-style lab photos. Field photos are the next milestone.
 
 ## Why
 
@@ -25,6 +25,15 @@ Most crop scanners send every photo to a paid API. shamba runs a small ONNX mode
 4. Prevent: lists rotation, resistant varieties, sanitation, and watering practices.
 5. Escalate: gives clear thresholds for calling a human extension officer.
 
+## What is new in 0.2.0
+
+- Rebuilt web interface with a phone camera first flow, drag and drop, paste, image preview, top-three cards, confidence bars, and a treatment plan.
+- Automatic dark mode, keyboard access, loading states, error recovery, and mobile layouts.
+- Added a 114-image held-out evaluation for both model variants.
+- Fixed a preprocessing bug that used the wrong normalization for the MobileNetV2 variant.
+- Model now reads `image_mean` and `image_std` from each model's own `preprocessor_config.json`.
+- Added a clearer confidence note for low-certainty results.
+
 ## Quickstart
 
 ```bash
@@ -37,9 +46,13 @@ shamba diagnose tests/fixtures/maize_rust.jpg
 shamba serve
 ```
 
-The web UI is built for phones. Tap "Choose or take a photo" and the result appears as a treatment card.
+The web UI is built for phones. Tap "Take or choose a leaf photo", and the result appears as a treatment card.
 
-If you need a smaller model, run `python scripts/download_model.py --variant mobilenet`. It downloads an 8.8 MB MobileNetV2 model. It is faster, but less accurate in our tests.
+For a smaller model:
+
+```bash
+python scripts/download_model.py --variant mobilenet
+```
 
 ## Model
 
@@ -48,13 +61,65 @@ If you need a smaller model, run `python scripts/download_model.py --variant mob
 | Architecture | DINOv2-small with a linear classification head |
 | Dataset | PlantVillage, 38 classes across 14 crops |
 | Reported accuracy | 98.86% top-1 on a held-out PlantVillage split of 10,862 photos, according to the model card |
-| Input | 224x224 RGB, 256 shortest-edge resize, ImageNet normalization |
+| Held-out check | 1.000 top-1 and 1.000 top-3 on 114 images, 3 per class |
+| Input | 224x224 RGB, 256 shortest-edge resize, ImageNet normalization for DINOv2 |
 | Size | 84 MB ONNX, fp32 |
 | Runtime | onnxruntime on CPU by default |
-| Latency | about 55 ms per image on an M-series Mac CPU |
-| Lightweight option | MobileNetV2, 8.8 MB, via `--variant mobilenet` |
+| Latency | about 134 ms per image on an M-series Mac CPU |
+| Lightweight option | MobileNetV2, 8.8 MB, 0.921 top-1 and 1.000 top-3 at about 16 ms |
+
+The DINOv2 variant is the default because it measured best. The MobileNetV2 variant is the right choice on a Raspberry Pi or when battery matters.
+
+Both variants read their normalization values from `preprocessor_config.json`. DINOv2 uses ImageNet mean and std. MobileNetV2 uses 0.5 mean and std. The old code used ImageNet values for both, which cut MobileNetV2 top-1 from 0.921 to 0.597 on the held-out set.
+
+See [docs/evaluation.md](docs/evaluation.md) for the method, per-image rows, and caveats.
 
 The model was trained on PlantVillage images. Those are lab-style photos of a single leaf on a plain background. It was not trained on field photos, so expect lower accuracy outdoors. The roadmap below covers that gap.
+
+## Why this model
+
+I checked newer plant-specific options before keeping DINOv2-small:
+
+- There is no DINOv3 plant-disease classifier with a better reported PlantVillage result.
+- Most newer options are generic backbones that would need retraining, or small MobileNet variants with lower accuracy.
+- Qwen3-VL plant models exist, but they are larger, slower on CPU, and unverified on this 38-class task.
+- DINOv2-small is 84 MB, runs in 134 ms on CPU, and scored 100 percent on the held-out sample.
+
+The next model step is a field-photo dataset, not a larger backbone. A larger model trained on the same lab photos would not fix the background and lighting gap.
+
+## Web UI
+
+`shamba serve` opens a local page with:
+
+- a phone camera first file input, plus drag and drop and paste
+- an image preview before diagnosis
+- a top-three list with confidence bars
+- a plain-language summary and confidence note
+- treatment sections for do now, low-cost and organic, chemical, and prevention
+- a clear escalation threshold
+- loading, empty, and error states
+- automatic dark mode and reduced-motion support
+- keyboard access and visible focus
+
+The page has no external fonts, scripts, or CDNs.
+
+## CLI
+
+```bash
+shamba diagnose tests/fixtures/maize_rust.jpg
+shamba diagnose photo.jpg --top-k 3
+shamba doctor
+shamba serve --port 8787
+```
+
+## Advice safety
+
+The advice database is general guidance. It is not a pesticide label, and it is not a substitute for a local extension officer.
+
+- Chemical suggestions are limited to when they are likely needed.
+- The escalate section gives a threshold for calling a human.
+- The UI repeats the disclaimer after every diagnosis.
+- Low confidence is shown as uncertain, not hidden.
 
 ## How it works
 
@@ -68,21 +133,32 @@ resize and center crop
 ONNX DINOv2-small
   |
   v
-top 3 predictions
+softmax over 38 classes
+  |
+  +--> top three matches
   |
   v
-advisory lookup
+local advice database
   |
-  +--> CLI
-  +--> web UI
+  v
+treatment and prevention plan
 ```
 
-- `src/shamba/model.py`: preprocessing and ONNX inference
-- `src/shamba/labels.py`: parses both `Crop___Disease` and `Crop with Disease` class names
-- `src/shamba/advice.py`: merges disease notes with general integrated pest management defaults
-- `src/shamba/data/treatments.json`: 5 IPM defaults and 26 disease entries
-- `src/shamba/server.py`: FastAPI app and the single-file mobile UI
-- `scripts/download_model.py`: downloads the model from the Hugging Face mirror by default
+No network call is made at runtime. The model and advice ship with the repo or are downloaded once.
+
+## Limits
+
+- It supports 38 PlantVillage classes across 14 crops. It does not cover every crop or disease.
+- Lab-style photos work best. Soil, shadows, multiple leaves, and phone blur lower accuracy.
+- It is a screening aid, not a lab test.
+- The advice is general and may not match local pesticide rules.
+- The held-out check is 114 images, not a full benchmark.
+
+## Privacy
+
+- Photos are processed on the device.
+- The web UI does not upload or store photos.
+- No telemetry, no API keys, and no network calls at runtime.
 
 ## Tests
 
@@ -90,41 +166,17 @@ advisory lookup
 pytest -q
 ```
 
-The suite has 13 tests covering labels, advice, preprocessing, inference, and the API. Model tests skip automatically if the weights are not downloaded.
-
-## Accuracy and limits
-
-This is decision support, not a plant doctor. It can be wrong, especially with:
-
-- field photos that include soil, several leaves, or mixed symptoms
-- crops outside the 38 PlantVillage classes
-- nutrient deficiencies and herbicide damage, which can look like disease
-
-Confirm the diagnosis before spending money on pesticide. Follow the product label and local registration rules. Low-confidence results are flagged and should be re-photographed.
-
-Published numbers so far:
-
-- Model card: 98.86% top-1 on a held-out PlantVillage split.
-- Local fixtures: 4 out of 4 correct on maize rust, tomato late blight, potato early blight, and healthy tomato. See `tests/test_model.py`.
-- Field trial: not done yet. The next step is 200 consented field photos from 3 regions, labelled by extension officers, plus a calibration report.
+The suite has 13 tests covering labels, preprocessing, prediction, advice, and the server.
 
 ## Roadmap
 
-The current label set covers maize, tomato, potato, pepper, apple, grape, cherry, peach, orange, strawberry, squash, soybean, raspberry, and blueberry. Next:
-
-- cassava: mosaic disease, brown streak, green mite
-- banana: Xanthomonas wilt, Panama disease
-- sorghum and millet: downy mildew, striga
-- common bean: anthracnose, bean fly
-- a field-photo dataset collected with extension officers, with consent and geotags
-- fine-tuning and INT8 quantization for a 2 MB mobile model
-- an Android app with on-device inference and offline caching
-- a Jetson and camera trap setup for community disease surveillance
-- translated result cards
-
-## Contributing
-
-The most useful contribution is field photos with expert labels. Open an issue with the crop, region, and symptoms. For code changes, read `docs/architecture.md` first.
+- a field-photo dataset and a fine-tuned field model
+- a local vision model for explanations on unusual cases
+- multi-leaf and whole-plant photos
+- offline history of past diagnoses on the device
+- a Raspberry Pi camera build
+- Spanish, French, and Portuguese advice packs
+- a confidence calibration study
 
 ## Related tools
 
@@ -132,6 +184,10 @@ The most useful contribution is field photos with expert labels. Open an issue w
 - [snap2sheet](https://github.com/iambiniyam/snap2sheet): receipt and invoice photos to CSV or Excel.
 - [find-local](https://github.com/iambiniyam/find-local): offline semantic search for files, PDFs, and photos.
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## License
 
-Code is MIT. The default model is CC-BY-SA-4.0. The dataset and optional model have their own terms. See [THIRD_PARTY.md](THIRD_PARTY.md).
+MIT. See [THIRD_PARTY.md](THIRD_PARTY.md) for model and runtime licenses.
