@@ -1,5 +1,8 @@
 # shamba
 
+[![ci](https://github.com/iambiniyam/shamba/actions/workflows/ci.yml/badge.svg)](https://github.com/iambiniyam/shamba/actions/workflows/ci.yml)
+[![license: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 A plant health scanner that runs offline.
 
 Take one clear photo of a leaf. shamba returns the three most likely crop diseases, a confidence score, and a treatment plan. It runs on a laptop, a Raspberry Pi, or a Jetson. After setup, no internet connection is needed.
