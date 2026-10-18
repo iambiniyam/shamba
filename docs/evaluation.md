@@ -65,6 +65,17 @@ This is why the benchmark exists. The tests passed before the fix because they o
 
 ## Calibration report
 
-`shamba evaluate ./labeled-folder` measures top-1 accuracy, expected calibration error, Brier score, and per-class recall. The folder layout is one directory per class name, with images inside.
+`shamba evaluate ./labeled-folder` measures top-1 accuracy, expected calibration error, Brier score, per-class recall, and selective accuracy at confidence thresholds.
 
-The tool is shipped without a dataset. A two-image smoke test on the bundled fixtures produced 0% accuracy, which is a warning about those fixtures, not a claim about the model on a real field set. A proper field-photo evaluation remains open.
+On the local 114-image PlantVillage evaluation set:
+
+| Metric | Value |
+|---|---:|
+| Images | 114 |
+| Top-1 accuracy | 1.000 |
+| ECE | 0.0069 |
+| Brier score | 0.0004 |
+| Coverage at confidence >= 0.9 | 99.1% |
+| Accuracy at confidence >= 0.9 | 100% |
+
+This is the same small lab-photo set described above, not a field-photo benchmark. It is useful for checking the metric path and for seeing how many predictions would be accepted at a threshold. It is not evidence of field performance.

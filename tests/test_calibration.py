@@ -5,6 +5,7 @@ from shamba.calibration import (
     brier_score,
     evaluate_records,
     expected_calibration_error,
+    threshold_curve,
 )
 
 
@@ -33,3 +34,11 @@ def test_evaluate_records_per_class():
     result = evaluate_records(records)
     assert result.count == 3
     assert result.per_class_recall == {"Maize rust": pytest.approx(1.0), "Tomato blight": 0.0}
+
+
+def test_threshold_curve_coverage_and_accuracy():
+    curve = threshold_curve([0.9, 0.8, 0.6], [True, True, False])
+    assert curve["0.5"]["coverage"] == 1.0
+    assert curve["0.5"]["accuracy"] == pytest.approx(2 / 3, abs=1e-3)
+    assert curve["0.9"]["coverage"] == pytest.approx(1 / 3, abs=1e-3)
+    assert curve["0.9"]["accuracy"] == 1.0

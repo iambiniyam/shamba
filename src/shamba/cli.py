@@ -141,6 +141,10 @@ def evaluate(
     for key, value in result.per_class_recall.items():
         table.add_row(key, f"{value:.1%}")
     console.print(table)
+    thresholds = Table("Confidence", "Coverage", "Accuracy")
+    for threshold, values in result.thresholds.items():
+        thresholds.add_row(f"≥ {threshold}", f"{values['coverage']:.1%}", f"{values['accuracy']:.1%}")
+    console.print(thresholds)
 
 
 @app.command()

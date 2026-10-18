@@ -40,6 +40,27 @@ def expected_calibration_error(
     return error
 
 
+def threshold_curve(
+    confidences: list[float],
+    outcomes: list[bool],
+    thresholds: tuple[float, ...] = (0.5, 0.7, 0.9),
+) -> dict[str, dict[str, float]]:
+    """Return coverage and accuracy for predictions at or above each threshold."""
+    output: dict[str, dict[str, float]] = {}
+    for threshold in thresholds:
+        selected = [
+            outcome
+            for confidence, outcome in zip(confidences, outcomes)
+            if confidence >= threshold
+        ]
+        output[f"{threshold:.1f}"] = {
+            "coverage": round(len(selected) / len(outcomes), 4) if outcomes else 0.0,
+            "accuracy": round(accuracy(selected), 4),
+            "accepted": len(selected),
+        }
+    return output
+
+
 @dataclass(slots=True)
 class Evaluation:
     count: int
@@ -47,6 +68,7 @@ class Evaluation:
     brier: float
     ece: float
     per_class_recall: dict[str, float]
+    thresholds: dict[str, dict[str, float]]
 
     def as_dict(self) -> dict[str, object]:
         return {
@@ -55,6 +77,7 @@ class Evaluation:
             "brier": round(self.brier, 4),
             "ece": round(self.ece, 4),
             "per_class_recall": {key: round(value, 4) for key, value in self.per_class_recall.items()},
+            "thresholds": self.thresholds,
         }
 
 
@@ -71,4 +94,5 @@ def evaluate_records(records: list[dict[str, object]]) -> Evaluation:
         brier=brier_score(confidences, outcomes),
         ece=expected_calibration_error(confidences, outcomes),
         per_class_recall={key: accuracy(values) for key, values in sorted(by_class.items())},
+        thresholds=threshold_curve(confidences, outcomes),
     )
