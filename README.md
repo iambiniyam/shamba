@@ -9,7 +9,7 @@ Take one clear photo of a leaf. shamba returns the three most likely crop diseas
 
 ![shamba web UI](docs/demo.png)
 
-Status: v0.2.4. It works well on PlantVillage-style lab photos. Field photos are the next milestone.
+Status: v0.2.5. It works well on PlantVillage-style lab photos. Field photos are the next milestone.
 
 ## Why
 
@@ -171,7 +171,7 @@ No network call is made at runtime. The model and advice ship with the repo or a
 pytest -q
 ```
 
-The suite has 30 tests covering labels, preprocessing, prediction, advice, history, calibration metrics, and the server.
+The suite has 31 tests, including a Playwright/axe browser check of the initial and empty-history states. covering labels, preprocessing, prediction, advice, history, calibration metrics, and the server.
 
 ## Roadmap
 
