@@ -9,7 +9,7 @@ training data carry their own licenses.
 - Base: [`facebook/dinov2-small`](https://huggingface.co/facebook/dinov2-small)
 - License: **CC-BY-SA-4.0**
 - Reported accuracy: 98.86% top-1 on a held-out PlantVillage split (10,862 photos)
-- Shipped as ONNX (`onnx/model_with_features.onnx` → `model.onnx`)
+- Shipped as ONNX (`onnx/model_with_features.onnx` -> `model.onnx`)
 
 If you redistribute a fine-tuned version, keep the CC-BY-SA attribution and
 share-alike terms.
@@ -19,7 +19,7 @@ share-alike terms.
 - Model: [`onnx-community/mobilenet_v2_1.0_224-plant-disease-identification-ONNX`](https://huggingface.co/onnx-community/mobilenet_v2_1.0_224-plant-disease-identification-ONNX)
 - Upstream fine-tune: [`linkanjarad/mobilenet_v2_1.0_224-plant-disease-identification`](https://huggingface.co/linkanjarad/mobilenet_v2_1.0_224-plant-disease-identification)
 - License: see the upstream model cards
-- Shipped as ONNX (`onnx/model.onnx` → `model.onnx`)
+- Shipped as ONNX (`onnx/model.onnx` -> `model.onnx`)
 
 ## Dataset
 

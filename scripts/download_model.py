@@ -57,12 +57,12 @@ def main() -> int:
 
     variant = VARIANTS[args.variant]
     base = (args.base_url or variant["base"]).rstrip("/")
-    print(f"shamba model: {args.variant} ({variant['size']}) → {args.dest}")
+    print(f"shamba model: {args.variant} ({variant['size']}) -> {args.dest}")
 
     for remote, local in variant["files"].items():
         url = f"{base}/{remote}"
         dest = args.dest / local
-        print(f"→ {url}")
+        print(f"-> {url}")
         try:
             fetch(url, dest)
         except Exception as exc:  # noqa: BLE001 - CLI should report, not traceback

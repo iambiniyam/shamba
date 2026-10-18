@@ -32,7 +32,7 @@ INDEX_HTML = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>shamba — crop doctor</title>
+<title>shamba: crop doctor</title>
 <style>
   :root { color-scheme: light dark; --green:#1f7a4d; --ink:#14261c; --paper:#f6f4ea; }
   * { box-sizing: border-box; }
@@ -67,7 +67,7 @@ INDEX_HTML = """<!doctype html>
 <body>
 <header>
   <h1>shamba</h1>
-  <p class="sub">Offline crop doctor. Take one clear leaf photo — get a diagnosis and a plan.</p>
+  <p class="sub">Offline crop doctor. Take one clear leaf photo and get a diagnosis and a plan.</p>
 </header>
 <main>
   <form id="form" class="card">
@@ -106,7 +106,7 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const f = fileInput.files[0];
   if (!f) return;
-  go.disabled = true; go.textContent = 'Reading the leaf…';
+  go.disabled = true; go.textContent = 'Reading the leaf...';
   out.innerHTML = '';
   const fd = new FormData(); fd.append('file', f); fd.append('top_k', '3');
   try {
@@ -124,7 +124,7 @@ form.addEventListener('submit', async (e) => {
         <p>${esc(a.summary)}</p>
         ${section('Do now', a.act_now)}
         ${section('Low-cost / organic', a.organic)}
-        ${section('Chemical — only if needed', a.chemical)}
+        ${section('Chemical (only if needed)', a.chemical)}
         ${section('Prevent next season', a.prevent)}
         ${a.escalate ? `<h3>When to escalate</h3><p>${esc(a.escalate)}</p>` : ''}
         <p class="muted">${esc(a.disclaimer)}</p>

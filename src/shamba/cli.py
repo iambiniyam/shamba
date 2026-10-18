@@ -100,8 +100,8 @@ def doctor() -> None:
 
     paths = Paths.default()
     console.print(f"onnxruntime: [bold]{ort.__version__}[/bold]")
-    console.print(f"model: {paths.model} — {'[green]found[/green]' if paths.model.exists() else '[red]missing[/red]'}")
-    console.print(f"config: {paths.config} — {'[green]found[/green]' if paths.config.exists() else '[red]missing[/red]'}")
+    console.print(f"model: {paths.model} ({'found' if paths.model.exists() else 'missing'})")
+    console.print(f"config: {paths.config} ({'found' if paths.config.exists() else 'missing'})")
     if not paths.model.exists():
         console.print("\nRun: [bold]python scripts/download_model.py[/bold]")
         raise typer.Exit(code=1)
