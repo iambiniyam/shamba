@@ -126,6 +126,12 @@ The current label set covers maize, tomato, potato, pepper, apple, grape, cherry
 
 The most useful contribution is field photos with expert labels. Open an issue with the crop, region, and symptoms. For code changes, read `docs/architecture.md` first.
 
+## Related tools
+
+- [redact](https://github.com/iambiniyam/redact): offline PII redaction for PDFs and photos.
+- [snap2sheet](https://github.com/iambiniyam/snap2sheet): receipt and invoice photos to CSV or Excel.
+- [find-local](https://github.com/iambiniyam/find-local): offline semantic search for files, PDFs, and photos.
+
 ## License
 
 Code is MIT. The default model is CC-BY-SA-4.0. The dataset and optional model have their own terms. See [THIRD_PARTY.md](THIRD_PARTY.md).
