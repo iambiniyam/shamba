@@ -16,9 +16,20 @@ const summary = document.getElementById("summary");
 const adviceSections = document.getElementById("advice-sections");
 const escalate = document.getElementById("escalate");
 const disclaimer = document.getElementById("disclaimer");
+const historySection = document.getElementById("history");
+const historyStatus = document.getElementById("history-status");
+const historyList = document.getElementById("history-list");
+const clearHistoryButton = document.getElementById("clear-history");
 
 const MAX_BYTES = 12 * 1024 * 1024;
 const state = { file: null, url: null };
+const timestampFormat = new Intl.DateTimeFormat(undefined, {
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+});
 
 function percent(value) {
   const number = Number(value) * 100;
@@ -154,6 +165,96 @@ function render(data) {
   resultTitle.focus();
 }
 
+function formatTimestamp(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "Unknown time";
+  return timestampFormat.format(date);
+}
+
+function renderHistory(entries) {
+  const items = Array.isArray(entries) ? entries : [];
+  if (!items.length) {
+    historyList.innerHTML = "";
+    historyList.hidden = true;
+    historyStatus.hidden = false;
+    historyStatus.classList.remove("is-error");
+    historyStatus.textContent = "No diagnoses yet. Your saved results will appear here.";
+    clearHistoryButton.hidden = true;
+    return;
+  }
+
+  historyStatus.hidden = true;
+  historyStatus.classList.remove("is-error");
+  historyList.innerHTML = items
+    .map((entry) => {
+      const healthy = Boolean(entry.healthy);
+      const crop = escapeHtml(entry.crop || "Unknown crop");
+      const disease = escapeHtml(entry.disease || "Unknown result");
+      const source = escapeHtml(entry.source || "unknown file");
+      const when = escapeHtml(formatTimestamp(entry.timestamp));
+      const stamp = escapeHtml(entry.timestamp);
+      return `<li class="history-row">
+        <span class="history-dot${healthy ? " is-healthy" : ""}" aria-hidden="true"></span>
+        <div class="history-detail">
+          <p class="history-crop">${crop} <span class="history-disease">· ${disease}</span></p>
+          <p class="history-meta"><time datetime="${stamp}">${when}</time> · <span class="history-source">${source}</span></p>
+        </div>
+        <span class="history-confidence">${percent(entry.confidence)}</span>
+      </li>`;
+    })
+    .join("");
+  historyList.hidden = false;
+  clearHistoryButton.hidden = false;
+}
+
+async function loadHistory() {
+  historySection.setAttribute("aria-busy", "true");
+  clearHistoryButton.disabled = true;
+  clearHistoryButton.hidden = true;
+  historyList.hidden = true;
+  historyStatus.hidden = false;
+  historyStatus.classList.remove("is-error");
+  historyStatus.textContent = "Loading recent diagnoses…";
+
+  try {
+    const response = await fetch("/api/history", { headers: { Accept: "application/json" } });
+    if (!response.ok) throw new Error(`Server returned ${response.status}`);
+    const data = await response.json();
+    renderHistory(data.entries);
+  } catch (error) {
+    historyList.innerHTML = "";
+    historyList.hidden = true;
+    historyStatus.hidden = false;
+    historyStatus.textContent = "History is unavailable right now.";
+    historyStatus.classList.add("is-error");
+  } finally {
+    clearHistoryButton.disabled = false;
+    historySection.setAttribute("aria-busy", "false");
+  }
+}
+
+async function clearHistory() {
+  if (!window.confirm("Clear all saved diagnoses from this device?")) return;
+  historySection.setAttribute("aria-busy", "true");
+  clearHistoryButton.disabled = true;
+  clearHistoryButton.textContent = "Clearing…";
+
+  try {
+    const response = await fetch("/api/history", { method: "DELETE" });
+    if (!response.ok) throw new Error(`Server returned ${response.status}`);
+    renderHistory([]);
+    historyStatus.textContent = "History cleared. New diagnoses will appear here.";
+  } catch (error) {
+    historyStatus.hidden = false;
+    historyStatus.textContent = "Could not clear history. Try again.";
+    historyStatus.classList.add("is-error");
+  } finally {
+    clearHistoryButton.textContent = "Clear history";
+    clearHistoryButton.disabled = false;
+    historySection.setAttribute("aria-busy", "false");
+  }
+}
+
 async function diagnose() {
   if (!state.file) {
     setStatus("Choose or take a leaf photo first.", true);
@@ -178,6 +279,7 @@ async function diagnose() {
     const data = await response.json();
     render(data);
     setStatus("Done. Check the confidence before acting.");
+    loadHistory();
   } catch (error) {
     setStatus(error.message, true);
   } finally {
@@ -206,3 +308,6 @@ document.addEventListener("keydown", (event) => {
     diagnose();
   }
 });
+
+clearHistoryButton.addEventListener("click", clearHistory);
+loadHistory();

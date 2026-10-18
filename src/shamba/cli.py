@@ -11,12 +11,23 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
 
+from . import __version__
 from .advice import get_advice
 from .config import Paths
 from .model import ModelNotReady, PlantDiseaseModel
 
 app = typer.Typer(add_completion=False, help="Offline crop-disease diagnosis for smallholder farmers.")
 console = Console()
+
+
+@app.callback(invoke_without_command=True)
+def _root(
+    version: bool = typer.Option(False, "--version", is_eager=True, help="Show the version and exit."),
+) -> None:
+    if version:
+        console.print(__version__)
+        raise typer.Exit()
+
 
 
 def _load_model(model_path: Path | None) -> PlantDiseaseModel:

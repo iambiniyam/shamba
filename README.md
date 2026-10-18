@@ -9,15 +9,19 @@ Take one clear photo of a leaf. shamba returns the three most likely crop diseas
 
 ![shamba web UI](docs/demo.png)
 
-Status: v0.2.1. It works well on PlantVillage-style lab photos. Field photos are the next milestone.
+Status: v0.2.2. It works well on PlantVillage-style lab photos. Field photos are the next milestone.
 
 ## Why
+
+See [how this compares](docs/comparison.md) with Plantix and PlantVillage Nuru.
 
 Crop diseases cost farmers an estimated 30 to 40 percent of production each year. Home gardeners run into the same problems. Extension officers are spread thin, and a plant clinic visit can cost more than the plant is worth.
 
 Most crop scanners send every photo to a paid API. shamba runs a small ONNX model on the device and pairs it with a local advice database. When the model is unsure, it says so and asks for a better photo.
 
 ## What it does
+
+- Keeps a local, metadata-only history of recent diagnoses.
 
 1. Diagnose: returns the top three crop and disease matches with confidence scores.
 2. Explain: describes the disease and how it spreads.
@@ -166,14 +170,13 @@ No network call is made at runtime. The model and advice ship with the repo or a
 pytest -q
 ```
 
-The suite has 13 tests covering labels, preprocessing, prediction, advice, and the server.
+The suite has 24 tests covering labels, preprocessing, prediction, advice, history, and the server.
 
 ## Roadmap
 
 - a field-photo dataset and a fine-tuned field model
 - a local vision model for explanations on unusual cases
 - multi-leaf and whole-plant photos
-- offline history of past diagnoses on the device
 - a Raspberry Pi camera build
 - Spanish, French, and Portuguese advice packs
 - a confidence calibration study

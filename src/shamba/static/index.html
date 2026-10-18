@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <title>shamba: plant health scanner</title>
-  <link rel="stylesheet" href="/static/app.css?v=5">
-  <script src="/static/app.js?v=5" defer></script>
+  <link rel="stylesheet" href="/static/app.css?v=6">
+  <script src="/static/app.js?v=6" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -81,6 +81,18 @@
       <div id="escalate"></div>
       <p id="disclaimer" class="note"></p>
       <p class="note">Low confidence means the photo may be unclear, or the plant may have a problem outside the 38 supported classes.</p>
+    </section>
+
+    <section id="history" class="history" aria-labelledby="history-title" aria-busy="true">
+      <div class="history-head">
+        <div>
+          <h2 id="history-title">Recent diagnoses</h2>
+          <p class="history-hint">Saved on this device. Only the filename, result, and time are kept.</p>
+        </div>
+        <button id="clear-history" class="btn ghost small" type="button" hidden>Clear history</button>
+      </div>
+      <p id="history-status" class="history-status" role="status" aria-live="polite">Loading recent diagnoses…</p>
+      <ol id="history-list" class="history-list" hidden></ol>
     </section>
   </main>
 
