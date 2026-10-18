@@ -12,7 +12,6 @@ from PIL import Image
 
 from shamba.model import PlantDiseaseModel
 
-
 STOP = {"with", "and", "plant"}
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.1 - 2026-10-18
+
+- Bound image uploads to 12 MB.
+- Limit images to 40 megapixels and return a readable error.
+- Apply EXIF orientation before prediction.
+- Keep the model check aligned with the uploaded file.
+
 ## 0.2.0 - 2026-10-18
 
 - Rebuilt the web interface with a phone camera first flow, drag and drop, paste, preview, top-three cards, confidence bars, and treatment sections.

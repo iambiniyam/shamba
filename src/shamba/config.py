@@ -22,7 +22,7 @@ class Paths:
     config: Path
 
     @classmethod
-    def default(cls) -> "Paths":
+    def default(cls) -> Paths:
         base = model_dir()
         return cls(model=base / "model.onnx", config=base / "config.json")
 

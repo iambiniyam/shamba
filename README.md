@@ -9,7 +9,7 @@ Take one clear photo of a leaf. shamba returns the three most likely crop diseas
 
 ![shamba web UI](docs/demo.png)
 
-Status: v0.2.0. It works well on PlantVillage-style lab photos. Field photos are the next milestone.
+Status: v0.2.1. It works well on PlantVillage-style lab photos. Field photos are the next milestone.
 
 ## Why
 
